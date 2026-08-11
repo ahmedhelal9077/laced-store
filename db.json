@@ -4,7 +4,31 @@
     "whatsapp": "01011111111",
     "instagram": "",
     "facebook": "",
-    "promoCodes": []
+    "promoCodes": [],
+    "payment": {
+      "instapay": "",
+      "ewallet": ""
+    },
+    "storeInfo": {
+      "whatsapp": "",
+      "instagram": "",
+      "facebook": "",
+      "tiktok": ""
+    },
+    "shipping": {
+      "freeShippingThreshold": 0
+    },
+    "heroBanner": {
+      "title": "",
+      "subtitle": "",
+      "buttonText": ""
+    },
+    "maintenance": {
+      "enabled": false,
+      "message": ""
+    },
+    "orderNotes": "",
+    "adminPassword": ""
   },
   "orders": {
     "customer": {
