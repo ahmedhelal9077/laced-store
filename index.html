@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <title>LACED | Premium Footwear</title>
+  <!-- SEO & Social Previews -->
+  <meta name="description" content="Elevate your everyday steps with LACED premium footwear. Shop the latest sneakers, limited editions, and exclusive collections in Egypt.">
+  <meta property="og:title" content="LACED | Premium Footwear">
+  <meta property="og:description" content="Shop the latest sneakers, limited editions, and exclusive collections in Egypt.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=630&fit=crop">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#000000">
+  <link rel="stylesheet" href="css/styles.css?v=639220506056575789">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+  <div style="background: #ff0000; color: #fff; text-align: center; padding: 10px; font-weight: 700; letter-spacing: 1px; font-size: 0.9rem; z-index: 1000; position: relative;">
+    🔥 FLASH SALE ENDS IN: <span id="flash-timer">12:45:00</span> 🔥
+  </div>
+  <!-- Header -->
+  <header>
+    <div class="container navbar">
+      <div class="hamburger">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </div>
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="LACED Logo" class="nav-logo">
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html?category=ladies">Ladies Collection</a>
+        <a href="shop.html?category=mens">Men's Collection</a>
+      </nav>
+                        <div class="nav-icons">
+        <a href="wishlist.html" style="color:white; position:relative; display:flex; align-items:center;">
+          <i class="fa-regular fa-heart" style="font-size: 1.4rem;"></i>
+          <span class="badge" id="wishlist-count">0</span>
+        </a>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const wl = JSON.parse(localStorage.getItem("laced_wishlist")||"[]");
+            const badge = document.getElementById("wishlist-count");
+            if (badge) badge.innerText = wl.length;
+          });
+        </script>
+        
+        <div class="search-icon" style="color:white; cursor:pointer; display:flex; align-items:center;">
+          <i class="fa-solid fa-magnifying-glass" style="font-size: 1.3rem;"></i>
+        </div>
+        
+        <div class="cart-icon" id="cart-icon" style="color:white; position:relative; display:flex; align-items:center; cursor:pointer;">
+          <i class="fa-solid fa-bag-shopping" style="font-size: 1.4rem;"></i>
+          <span class="badge" id="cart-count">0</span>
+        </div>
+      </div>
+    </div>
+  <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <ul class="mobile-menu-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html?category=ladies">Ladies Collection</a></li>
+        <li><a href="shop.html?category=mens">Men's Collection</a></li>
+      </ul>
+      <div class="mobile-menu-bottom">
+        <a href="#" class="login-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          Log in
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="close-cart" id="close-cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cart-total-amount">0.00 EGP</span>
+      </div>
+      <button class="btn btn-full">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-image">
+      <img src="img/hero-bg.jpg" alt="Streetwear sneakers">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container" style="display: flex; align-items: center; height: 100%;">
+      <div class="hero-content" style="text-align: center; width: 100%; display: flex; flex-direction: column; align-items: center;">
+        <h1 class="hero-title">Step into the future.</h1>
+        
+        <a href="shop.html" class="btn shop-all-btn">Shop all</a>
+      </div>
+    </div>
+  </section>
+
+      <!-- Top Categories -->
+    <section class="top-categories" style="padding: 5rem 0; background-color: var(--secondary-color);">
+      <div class="container">
+        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 3rem; font-weight: 700;">Shop our top categories</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
+          
+          <!-- Ladies Card -->
+          <a href="shop.html?category=ladies" style="text-decoration: none; color: inherit; background: white; border-radius: 12px; overflow: hidden; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center; padding-bottom: 1.5rem;" class="category-card">
+            <div style="width: 100%; aspect-ratio: 1; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 1.5rem;">
+              <img src="img/ladies-cover.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x400?text=LADIES+COLLECTION';" alt="Ladies" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: 1px;">LADIES COLLECTION</h3>
+            <span style="font-size: 1.5rem;">&rarr;</span>
+          </a>
+
+          <!-- Mens Card -->
+          <a href="shop.html?category=mens" style="text-decoration: none; color: inherit; background: white; border-radius: 12px; overflow: hidden; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center; padding-bottom: 1.5rem;" class="category-card">
+            <div style="width: 100%; aspect-ratio: 1; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 1.5rem;">
+              <img src="img/mens-cover.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x400?text=MENS+COLLECTION';" alt="Mens" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: 1px;">MENS COLLECTION</h3>
+            <span style="font-size: 1.5rem;">&rarr;</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+<!-- Featured Products -->
+  <section class="shop-section">
+    <div class="container">
+      <h2 class="section-title">New Arrivals</h2>
+      <div class="products-grid" id="featured-grid"></div>
+      <div style="text-align: center; margin-top: 4rem;">
+        <a href="shop.html" class="btn btn-outline">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Brand Reviews -->
+  <section class="container" style="padding: 60px 20px; border-top: 1px solid #eee;">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <h2 style="font-size: 2.5rem; font-weight: 900; letter-spacing: -1px; text-transform: uppercase;">Trusted by Thousands</h2>
+      <p style="color: #666; margin-top: 10px;">Don't just take our word for it. Here is what LACED customers have to say.</p>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+      
+      <div style="background: #f9f9f9; padding: 30px; border-radius: 8px; border: 1px solid #eee;">
+        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+          <div style="width: 50px; height: 50px; background: #000; color: #fff; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; font-weight: 700; border-radius: 50%;">أ</div>
+          <div>
+            <h4 style="margin: 0; font-weight: 700;">أحمد طارق</h4>
+            <span style="color: #FFD700; font-size: 0.9rem;">⭐⭐⭐⭐⭐</span>
+          </div>
+        </div>
+        <p style="color: #555; line-height: 1.6; font-size: 0.95rem;">"بصراحة من أنضف الستورز اللي اتعاملت معاها، الكواليتي ممتازة جداً والمقاسات مظبوطة بالمللي. التغليف كمان كان شيك جداً."</p>
+      </div>
+
+      <div style="background: #f9f9f9; padding: 30px; border-radius: 8px; border: 1px solid #eee;">
+        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+          <div style="width: 50px; height: 50px; background: #000; color: #fff; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; font-weight: 700; border-radius: 50%;">م</div>
+          <div>
+            <h4 style="margin: 0; font-weight: 700;">محمود حسن</h4>
+            <span style="color: #FFD700; font-size: 0.9rem;">⭐⭐⭐⭐⭐</span>
+          </div>
+        </div>
+        <p style="color: #555; line-height: 1.6; font-size: 0.95rem;">"أسرع توصيل شوفته في حياتي! الأوردر وصل تاني يوم على طول والكوتشي شكله على الطبيعة أحلى من الصور بكتير. أكيد هطلب تاني."</p>
+      </div>
+
+      <div style="background: #f9f9f9; padding: 30px; border-radius: 8px; border: 1px solid #eee;">
+        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+          <div style="width: 50px; height: 50px; background: #000; color: #fff; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; font-weight: 700; border-radius: 50%;">ع</div>
+          <div>
+            <h4 style="margin: 0; font-weight: 700;">عمر خالد</h4>
+            <span style="color: #FFD700; font-size: 0.9rem;">⭐⭐⭐⭐⭐</span>
+          </div>
+        </div>
+        <p style="color: #555; line-height: 1.6; font-size: 0.95rem;">"مريح جداً في اللبس والمشي لمسافات طويلة.. خدمة العملاء محترمين جداً وساعدوني اختار المقاس الصح قبل ما أطلب. بجد شكراً."</p>
+      </div>
+
+      <div style="background: #f9f9f9; padding: 30px; border-radius: 8px; border: 1px solid #eee;">
+        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+          <div style="width: 50px; height: 50px; background: #000; color: #fff; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; font-weight: 700; border-radius: 50%;">ك</div>
+          <div>
+            <h4 style="margin: 0; font-weight: 700;">كريم عادل</h4>
+            <span style="color: #FFD700; font-size: 0.9rem;">⭐⭐⭐⭐⭐</span>
+          </div>
+        </div>
+        <p style="color: #555; line-height: 1.6; font-size: 0.95rem;">"شياكة وأناقة مفيش بعد كده. خامة النعل مريحة جداً ومش بيتعب الرجل خالص في الجري أو الجيم."</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-logo">
+            <img src="img/logo.png" alt="LACED Logo">
+          </div>
+          <p class="footer-text">Elevating your everyday steps with premium footwear designed for the modern lifestyle.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html">All Products</a></li>
+            <li><a href="shop.html?category=ladies">Ladies Collection</a></li>
+            <li><a href="shop.html?category=mens">Men's Collection</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="tracking.html" style="font-weight:700; color:#fff;">Track Order</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="https://wa.me/201000000000" target="_blank">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+                                                      <div class="footer-payments" style="text-align: center; margin-bottom: 2rem;">
+        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; align-items: center;">
+          <img src="img/payments/visa.png" alt="Visa" style="height: 32px; background: white; padding: 4px; border-radius: 6px; object-fit: contain;">
+          <img src="img/payments/mastercard.png" alt="Mastercard" style="height: 32px; background: white; padding: 4px; border-radius: 6px; object-fit: contain;">
+          <img src="img/payments/amex.png" alt="Amex" style="height: 32px; background: white; padding: 4px; border-radius: 6px; object-fit: contain;">
+          <img src="img/payments/paypal.png" alt="PayPal" style="height: 32px; background: white; padding: 4px; border-radius: 6px; object-fit: contain;">
+          <img src="img/payments/applepay.png" alt="Apple Pay" style="height: 32px; background: white; padding: 4px; border-radius: 6px; object-fit: contain;">
+        </div>
+      </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 LACED. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-close" id="search-close">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </div>
+    <div class="search-content">
+      <input type="text" id="search-input" placeholder="Search for products..." autocomplete="off">
+      <button id="search-btn">Search</button>
+    </div>
+  </div>
+
+  <script>document.write('<script src="js/data.js?v=' + Date.now() + '"><\/script>');</script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js?v=3"></script>
+
+  <script>
+    // Flash Sale Timer
+    let flashTime = 12 * 3600 + 45 * 60; // 12h 45m
+    setInterval(() => {
+      flashTime--;
+      if (flashTime < 0) flashTime = 0;
+      const h = Math.floor(flashTime / 3600).toString().padStart(2, "0");
+      const m = Math.floor((flashTime % 3600) / 60).toString().padStart(2, "0");
+      const s = Math.floor(flashTime % 60).toString().padStart(2, "0");
+      const timerEl = document.getElementById("flash-timer");
+      if (timerEl) timerEl.innerText = `${h}:${m}:${s}`;
+    }, 1000);
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

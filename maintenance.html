@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Under Maintenance | LACED</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="display:flex; justify-content:center; align-items:center; height:100vh; background:#f4f4f4; text-align:center;">
+  <div>
+    <h1>We'll be back soon!</h1>
+    <p id="maintenance-msg" style="margin-top:20px; font-size:1.2rem; color:#555;">We're updating our store.</p>
+  </div>
+  <script>
+    fetch('/api/settings').then(r => r.json()).then(data => {
+        if (!data.maintenance || !data.maintenance.enabled) {
+            window.location.href = 'index.html';
+        } else if (data.maintenance.message) {
+            document.getElementById('maintenance-msg').innerText = data.maintenance.message;
+        }
+    });
+  </script>
+</body>
+</html>

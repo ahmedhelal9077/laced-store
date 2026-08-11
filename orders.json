@@ -1,0 +1,23 @@
+﻿{
+    "customer":  {
+                     "name":  "Ahmed Helal",
+                     "phone":  "01275870139",
+                     "city":  "Other",
+                     "address":  "الجلاء"
+                 },
+    "paymentMethod":  "Visa",
+    "items":  [
+                  {
+                      "id":  8261575409727,
+                      "name":  "adidas - adidas x END. Samba \u0027Consortium Cup\u0027",
+                      "price":  2200,
+                      "image":  "https://cdn.shopify.com/s/files/1/0634/9894/4575/files/EDD784D3-E402-45AA-B07D-68547DE37454.png?v=1784314014",
+                      "size":  "37",
+                      "quantity":  1
+                  }
+              ],
+    "total":  2260,
+    "id":  1000,
+    "date":  "2026-08-11T14:12:25.0815974+03:00",
+    "status":  "Pending"
+}

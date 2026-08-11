@@ -1,0 +1,713 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Admin Dashboard | LACED</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #f4f4f4; color: #333; }
+    
+    /* Login Screen */
+    #login-screen {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      color: #fff;
+    }
+    .login-box {
+      background: #111;
+      padding: 40px;
+      border-radius: 8px;
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+    .login-box h1 { margin-bottom: 20px; font-weight: 900; letter-spacing: -2px; font-size: 2.5rem; }
+    .login-box input {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #333;
+      background: #000;
+      color: #fff;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .login-box button {
+      width: 100%;
+      padding: 15px;
+      background: #fff;
+      color: #000;
+      border: none;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .login-box button:hover { background: #eee; }
+    
+    /* Dashboard Layout */
+    #dashboard {
+      display: none;
+      height: 100vh;
+      display: flex; /* overridden by JS initially */
+    }
+    .sidebar {
+      width: 250px;
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar h2 { font-weight: 900; letter-spacing: -1px; margin-bottom: 40px; font-size: 2rem; }
+    .sidebar nav a {
+      color: #aaa;
+      text-decoration: none;
+      display: block;
+      padding: 15px 10px;
+      margin-bottom: 5px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+    .sidebar nav a:hover, .sidebar nav a.active {
+      background: #222;
+      color: #fff;
+    }
+    .sidebar .logout { margin-top: auto; color: #ff4444; }
+    
+    .content {
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .header h1 { font-size: 2rem; }
+    
+    .btn {
+      background: #000; color: #fff; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: 600;
+    }
+    .btn:hover { background: #333; }
+    .btn.outline { background: transparent; color: #000; border: 1px solid #000; }
+    .btn.danger { background: #ff4444; }
+    
+    /* Tables */
+    .table-container {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      overflow-x: auto;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+    th { background: #fafafa; font-weight: 600; color: #666; }
+    tr:last-child td { border-bottom: none; }
+    
+    .status-select {
+      padding: 5px 10px; border-radius: 4px; border: 1px solid #ddd;
+    }
+    .status-select.pending { background: #fff3cd; color: #856404; }
+    .status-select.shipped { background: #cce5ff; color: #004085; }
+    .status-select.delivered { background: #d4edda; color: #155724; }
+    .status-select.cancelled { background: #f8d7da; color: #721c24; }
+    
+    .product-img { width: 50px; height: 50px; object-fit: cover; border-radius: 4px; }
+    
+    /* Tabs */
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* Forms */
+    .modal {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5);
+      display: none; justify-content: center; align-items: center;
+    }
+    .modal-content {
+      background: #fff; padding: 30px; border-radius: 8px; width: 100%; max-width: 500px;
+    }
+    .modal-content h3 { margin-bottom: 20px; }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
+    .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
+    .modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+  <!-- Login Screen -->
+  <div id="login-screen">
+    <div class="login-box">
+      <h1>LACED</h1>
+      <p style="margin-bottom:20px; color:#aaa;">Admin Control Panel</p>
+      <input type="password" id="admin-pass" placeholder="Enter Password" />
+      <button onclick="login()">Access Dashboard</button>
+      <p id="login-error" style="color:#ff4444; margin-top:10px; display:none;">Incorrect Password</p>
+    </div>
+  </div>
+
+  <!-- Main Dashboard -->
+  <div id="dashboard" style="display:none;">
+    <div class="sidebar">
+      <h2>LACED</h2>
+      <nav>
+        <a href="#" class="active" onclick="switchTab('orders', this)">Orders</a>
+        <a href="#" onclick="switchTab('products', this)">Products</a>
+        <a href="#" onclick="switchTab('settings', this)">Settings</a>
+        <a href="#" class="logout" onclick="logout()">Logout</a>
+      </nav>
+    </div>
+    
+    <div class="content">
+      <!-- Orders Tab -->
+      <div id="tab-orders" class="tab-content active">
+        <div class="header">
+          <h1>Orders Management</h1>
+          <button class="btn" onclick="exportOrdersCSV()">Export to Excel (CSV)</button>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Customer</th>
+                <th>City</th>
+                <th>Payment</th>
+                <th>Total</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="orders-tbody">
+              <!-- Orders injected here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <!-- Settings Tab -->
+      <div id="tab-settings" class="tab-content">
+        <div class="header">
+          <h1>Store Settings</h1>
+        </div>
+        
+        <div style="display:grid; gap:20px; grid-template-columns:1fr 1fr; margin-top:20px;">
+          
+          <!-- Store Info -->
+          <div style="background:#fff; padding:25px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">ðŸ“± Store Info</h3>
+            <label style="display:block; font-weight:600; margin-bottom:5px;">WhatsApp Number</label>
+            <input type="text" id="setting-whatsapp" placeholder="e.g. 201000000000" style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px;" />
+            <label style="display:block; font-weight:600; margin-bottom:5px;">Instagram</label>
+            <input type="text" id="setting-instagram" placeholder="e.g. @laced.eg" style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px;" />
+            <label style="display:block; font-weight:600; margin-bottom:5px;">Facebook</label>
+            <input type="text" id="setting-facebook" placeholder="e.g. facebook.com/laced" style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px;" />
+            <label style="display:block; font-weight:600; margin-bottom:5px;">TikTok</label>
+            <input type="text" id="setting-tiktok" placeholder="e.g. @laced.eg" style="width:100%; padding:10px; border:1px solid #ddd; border-radius:6px;" />
+          </div>
+
+          <!-- Payment Details -->
+          <div style="background:#fff; padding:25px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">ðŸ’³ Payment Details</h3>
+            <label style="display:block; font-weight:600; margin-bottom:5px;">InstaPay Handle</label>
+            <input type="text" id="setting-instapay" placeholder="e.g. laced@instapay" style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px;" />
+            <label style="display:block; font-weight:600; margin-bottom:5px;">E-Wallet Number (Vodafone Cash)</label>
+            <input type="text" id="setting-ewallet" placeholder="e.g. 01000000000" style="width:100%; padding:10px; border:1px solid #ddd; border-radius:6px;" />
+          </div>
+
+          <!-- Promo Codes -->
+          <div style="background:#fff; padding:25px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">ðŸ·ï¸ Promo Codes</h3>
+            <div id="promo-codes-list" style="display:flex; flex-direction:column; gap:10px;"></div>
+            <button onclick="addPromoCode()" class="btn" style="margin-top:15px; width:100%;">+ Add Promo Code</button>
+          </div>
+
+          <!-- Free Shipping -->
+          <div style="background:#fff; padding:25px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">ðŸšš Free Shipping</h3>
+            <label style="display:block; font-weight:600; margin-bottom:5px;">Free Shipping if order above (EGP)</label>
+            <input type="number" id="setting-free-shipping" placeholder="e.g. 2000 (0 = disabled)" style="width:100%; padding:10px; margin-bottom:10px; border:1px solid #ddd; border-radius:6px;" />
+            <p style="font-size:0.85rem; color:#888;">Set to 0 to disable free shipping.</p>
+          </div>
+
+          <!-- Hero Banner -->
+          <div style="background:#fff; padding:25px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">ðŸŽ¯ Hero Banner</h3>
+            <label style="display:block; font-weight:600; margin-bottom:5px;">Title</label>
+            <input type="text" id="setting-hero-title" placeholder="e.g. Step Into Style" style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px;" />
+            <label style="display:block; font-weight:600; margin-bottom:5px;">Subtitle</label>
+            <input type="text" id="setting-hero-subtitle" placeholder="e.g. Premium sneakers curated for the culture." style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px;" />
+            <label style="display:block; font-weight:600; margin-bottom:5px;">Button Text</label>
+            <input type="text" id="setting-hero-button" placeholder="e.g. Shop Now" style="width:100%; padding:10px; border:1px solid #ddd; border-radius:6px;" />
+          </div>
+
+          <!-- Order Notes -->
+          <div style="background:#fff; padding:25px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">ðŸ“‹ Order Confirmation Note</h3>
+            <label style="display:block; font-weight:600; margin-bottom:5px;">Message shown after order is placed</label>
+            <textarea id="setting-order-notes" rows="4" placeholder="e.g. Your order will be delivered within 3-5 business days." style="width:100%; padding:10px; border:1px solid #ddd; border-radius:6px; resize:vertical; font-family:Inter,sans-serif;"></textarea>
+          </div>
+
+          <!-- Maintenance Mode -->
+          <div style="background:#fff; padding:25px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">â¸ï¸ Maintenance Mode</h3>
+            <label style="display:flex; align-items:center; gap:10px; font-weight:600; margin-bottom:12px; cursor:pointer;">
+              <input type="checkbox" id="setting-maintenance-on" style="width:20px; height:20px; cursor:pointer;" />
+              Enable Maintenance Mode
+            </label>
+            <label style="display:block; font-weight:600; margin-bottom:5px;">Maintenance Message</label>
+            <input type="text" id="setting-maintenance-msg" placeholder="e.g. We're updating our store. Back soon!" style="width:100%; padding:10px; border:1px solid #ddd; border-radius:6px;" />
+            <p style="font-size:0.85rem; color:#ff4444; margin-top:8px;">âš ï¸ When enabled, customers will see only the maintenance message.</p>
+          </div>
+
+          <!-- Change Password -->
+          <div style="background:#fff; padding:25px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">ðŸ”’ Admin Password</h3>
+            <label style="display:block; font-weight:600; margin-bottom:5px;">New Password</label>
+            <input type="password" id="setting-new-password" placeholder="Enter new password" style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px;" />
+            <label style="display:block; font-weight:600; margin-bottom:5px;">Confirm Password</label>
+            <input type="password" id="setting-confirm-password" placeholder="Confirm new password" style="width:100%; padding:10px; border:1px solid #ddd; border-radius:6px;" />
+          </div>
+
+        </div>
+        
+        <button onclick="saveSettings()" style="margin-top:25px; padding:15px 40px; background:#25D366; color:#fff; font-weight:700; border:none; cursor:pointer; font-size:1.1rem; border-radius:6px; width:100%; letter-spacing:0.5px;">âœ… Save All Settings</button>
+      </div>
+
+      <!-- Products Tab -->
+      <div id="tab-products" class="tab-content">
+        <div class="header">
+          <h1>Products Management</h1>
+          <button class="btn" onclick="openProductModal()">+ Add New Product</button>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price (EGP)</th>
+                <th>Brand</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="products-tbody">
+              <!-- Products injected here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Modal -->
+  <div class="modal" id="product-modal">
+    <div class="modal-content">
+      <h3 id="modal-title">Add Product</h3>
+      <input type="hidden" id="p-id" />
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" id="p-name" />
+      </div>
+      <div class="form-group">
+        <label>Price</label>
+        <input type="number" id="p-price" />
+      </div>
+      <div class="form-group">
+        <label>Brand (mens/ladies)</label>
+        <input type="text" id="p-category" />
+      </div>
+      <div class="form-group">
+        <label>Image URL</label>
+        <input type="text" id="p-image" placeholder="img/products/product_1.jpg" />
+      </div>
+      <div class="modal-actions">
+        <button class="btn outline" onclick="closeProductModal()">Cancel</button>
+        <button class="btn" onclick="saveProduct()">Save Product</button>
+      </div>
+    </div>
+  </div>
+
+  <script>document.write('<script src="js/data.js?v=' + Date.now() + '"><\/script>');</script>
+  <script>
+    // --- Auth Logic ---
+    async function login() {
+      const pass = document.getElementById('admin-pass').value;
+      try {
+        const res = await fetch('/api/auth', {
+          method: 'POST',
+          body: JSON.stringify({ password: pass })
+        });
+        const data = await res.json();
+        if (data.success) {
+          sessionStorage.setItem('laced_admin_token', data.token);
+          document.getElementById('login-screen').style.display = 'none';
+          document.getElementById('dashboard').style.display = 'flex';
+          loadOrders();
+            loadSettings();
+          loadProducts();
+        } else {
+          document.getElementById('login-error').style.display = 'block';
+        }
+      } catch (e) { alert("Server not running or offline."); }
+    }
+    
+    
+    let storeSettings = { 
+      promoCodes: [], payment: { instapay: "", ewallet: "" },
+      storeInfo: { whatsapp: "", instagram: "", facebook: "", tiktok: "" },
+      shipping: { freeShippingThreshold: 0 },
+      maintenance: { enabled: false, message: "" },
+      heroBanner: { title: "", subtitle: "", buttonText: "" },
+      orderNotes: "",
+      adminPassword: ""
+    };
+    
+    async function loadSettings() {
+      try {
+        const res = await fetch("/api/settings");
+        storeSettings = await res.json();
+        
+        // Payment
+        document.getElementById("setting-instapay").value = storeSettings.payment?.instapay || "";
+        document.getElementById("setting-ewallet").value = storeSettings.payment?.ewallet || "";
+        
+        // Store Info
+        document.getElementById("setting-whatsapp").value = storeSettings.storeInfo?.whatsapp || "";
+        document.getElementById("setting-instagram").value = storeSettings.storeInfo?.instagram || "";
+        document.getElementById("setting-facebook").value = storeSettings.storeInfo?.facebook || "";
+        document.getElementById("setting-tiktok").value = storeSettings.storeInfo?.tiktok || "";
+        
+        // Shipping
+        document.getElementById("setting-free-shipping").value = storeSettings.shipping?.freeShippingThreshold || 0;
+        
+        // Hero
+        document.getElementById("setting-hero-title").value = storeSettings.heroBanner?.title || "";
+        document.getElementById("setting-hero-subtitle").value = storeSettings.heroBanner?.subtitle || "";
+        document.getElementById("setting-hero-button").value = storeSettings.heroBanner?.buttonText || "";
+        
+        // Notes & Maintenance
+        document.getElementById("setting-order-notes").value = storeSettings.orderNotes || "";
+        document.getElementById("setting-maintenance-on").checked = storeSettings.maintenance?.enabled || false;
+        document.getElementById("setting-maintenance-msg").value = storeSettings.maintenance?.message || "";
+        
+        // Password
+        document.getElementById("setting-new-password").value = storeSettings.adminPassword || "";
+        document.getElementById("setting-confirm-password").value = storeSettings.adminPassword || "";
+        
+        renderPromoCodes();
+      } catch (e) { console.error("Error loading settings", e); }
+    }
+    
+    function renderPromoCodes() {
+      const list = document.getElementById("promo-codes-list");
+      list.innerHTML = storeSettings.promoCodes.map((p, i) => `
+        <div style="display:flex; gap:10px;">
+          <input type="text" value="${p.code}" onchange="storeSettings.promoCodes[${i}].code=this.value" placeholder="CODE" style="flex:1; padding:8px;" />
+          <input type="number" value="${p.discount}" onchange="storeSettings.promoCodes[${i}].discount=parseInt(this.value)" placeholder="% Discount" style="width:100px; padding:8px;" />
+          <button onclick="removePromoCode(${i})" style="padding:8px; background:red; color:white; border:none; cursor:pointer;">X</button>
+        </div>
+      `).join("");
+    }
+    
+    window.addPromoCode = function() {
+      storeSettings.promoCodes.push({ code: "NEWCODE", discount: 10 });
+      renderPromoCodes();
+    };
+    
+    window.removePromoCode = function(index) {
+      storeSettings.promoCodes.splice(index, 1);
+      renderPromoCodes();
+    };
+    
+    window.saveSettings = async function() {
+      const pass1 = document.getElementById("setting-new-password").value;
+      const pass2 = document.getElementById("setting-confirm-password").value;
+      if (pass1 !== pass2) return alert("Passwords do not match!");
+
+      storeSettings.payment = storeSettings.payment || {};
+      storeSettings.payment.instapay = document.getElementById("setting-instapay").value;
+      storeSettings.payment.ewallet = document.getElementById("setting-ewallet").value;
+      
+      storeSettings.storeInfo = storeSettings.storeInfo || {};
+      storeSettings.storeInfo.whatsapp = document.getElementById("setting-whatsapp").value;
+      storeSettings.storeInfo.instagram = document.getElementById("setting-instagram").value;
+      storeSettings.storeInfo.facebook = document.getElementById("setting-facebook").value;
+      storeSettings.storeInfo.tiktok = document.getElementById("setting-tiktok").value;
+      
+      storeSettings.shipping = storeSettings.shipping || {};
+      storeSettings.shipping.freeShippingThreshold = parseFloat(document.getElementById("setting-free-shipping").value) || 0;
+      
+      storeSettings.heroBanner = storeSettings.heroBanner || {};
+      storeSettings.heroBanner.title = document.getElementById("setting-hero-title").value;
+      storeSettings.heroBanner.subtitle = document.getElementById("setting-hero-subtitle").value;
+      storeSettings.heroBanner.buttonText = document.getElementById("setting-hero-button").value;
+      
+      storeSettings.maintenance = storeSettings.maintenance || {};
+      storeSettings.maintenance.enabled = document.getElementById("setting-maintenance-on").checked;
+      storeSettings.maintenance.message = document.getElementById("setting-maintenance-msg").value;
+      
+      storeSettings.orderNotes = document.getElementById("setting-order-notes").value;
+      storeSettings.adminPassword = pass1;
+      
+      try {
+        const res = await fetch("/api/admin/settings", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(storeSettings)
+        });
+        if ((await res.json()).success) {
+          alert("Settings saved successfully!");
+        } else {
+          alert("Failed to save settings.");
+        }
+      } catch (e) { alert("Error saving settings."); }
+    };
+
+    function logout() {
+      sessionStorage.removeItem('laced_admin_token');
+      window.location.reload();
+    }
+    
+    // Check if already logged in this session
+    if (sessionStorage.getItem('laced_admin_token')) {
+      document.getElementById('login-screen').style.display = 'none';
+      document.getElementById('dashboard').style.display = 'flex';
+      loadOrders();
+            loadSettings();
+      loadProducts();
+    }
+
+    // --- Tab Logic ---
+    function switchTab(tabId, el) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.getElementById('tab-' + tabId).classList.add('active');
+      
+      document.querySelectorAll('.sidebar nav a').forEach(a => a.classList.remove('active'));
+      el.classList.add('active');
+    }
+
+    // --- Orders Logic ---
+    let globalOrders = [];
+    async function loadOrders() {
+      try {
+        const res = await fetch('/api/orders');
+        globalOrders = await res.json();
+        renderOrders();
+      } catch(e) { console.error(e); }
+    }
+
+    function renderOrders() {
+      const tbody = document.getElementById('orders-tbody');
+      tbody.innerHTML = '';
+      
+      // Sort newest first
+      const sortedOrders = [...globalOrders].reverse();
+      
+      sortedOrders.forEach(o => {
+        const dateStr = new Date(o.date).toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' });
+        
+        let statusClass = 'pending';
+        if (o.status === 'Shipped') statusClass = 'shipped';
+        if (o.status === 'Delivered') statusClass = 'delivered';
+        if (o.status === 'Cancelled') statusClass = 'cancelled';
+        
+        tbody.innerHTML += `
+          <tr>
+            <td>#${o.id}</td>
+            <td>${dateStr}</td>
+            <td><strong>${o.customer.name}</strong><br><small>${o.customer.phone}</small></td>
+            <td>${o.customer.city}</td>
+            <td>${o.paymentMethod}</td>
+            <td><strong>EGP ${o.total}</strong></td>
+            <td>
+              <select class="status-select ${statusClass}" onchange="updateOrderStatus('${o.id}', this.value)">
+                <option value="Pending" ${o.status==='Pending'?'selected':''}>Pending</option>
+                <option value="Shipped" ${o.status==='Shipped'?'selected':''}>Shipped</option>
+                <option value="Delivered" ${o.status==='Delivered'?'selected':''}>Delivered</option>
+                <option value="Cancelled" ${o.status==='Cancelled'?'selected':''}>Cancelled</option>
+              </select>
+            </td>
+          </tr>
+        `;
+      });
+    }
+
+    async function updateOrderStatus(orderId, newStatus) {
+      try {
+        const res = await fetch('/api/update_order_status', {
+          method: 'POST',
+          body: JSON.stringify({ orderId, status: newStatus })
+        });
+        if (res.ok) {
+          // Visual update only, avoids full reload blink
+          const select = event.target;
+          select.className = 'status-select ' + newStatus.toLowerCase();
+        }
+      } catch(e) { alert("Failed to update status."); }
+    }
+
+    function exportOrdersCSV() {
+      if (!globalOrders.length) return alert("No orders to export.");
+      
+      let csvContent = "data:text/csv;charset=utf-8,\uFEFF";
+      csvContent += "Order ID,Date,Name,Phone,City,Address,Payment Method,Items,Total,Status\n";
+      
+      globalOrders.forEach(o => {
+        const date = new Date(o.date).toLocaleString();
+        const items = o.items.map(i => `${i.quantity}x ${i.name} (Sz:${i.size})`).join(" | ");
+        
+        const row = [
+          o.id,
+          `"${date}"`,
+          `"${o.customer.name}"`,
+          `"${o.customer.phone}"`,
+          `"${o.customer.city}"`,
+          `"${o.customer.address}"`,
+          o.paymentMethod,
+          `"${items}"`,
+          o.total,
+          o.status
+        ];
+        csvContent += row.join(",") + "\n";
+      });
+      
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", `laced_orders_${new Date().toISOString().slice(0,10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // --- Products Logic ---
+    let editableProducts = [];
+    
+    function loadProducts() {
+      // products array is injected by <script src="js/data.js"> globally
+      if (typeof products !== 'undefined') {
+        editableProducts = JSON.parse(JSON.stringify(products));
+        renderProducts();
+      }
+    }
+
+    function renderProducts() {
+      const tbody = document.getElementById('products-tbody');
+      tbody.innerHTML = '';
+      
+      editableProducts.forEach(p => {
+        tbody.innerHTML += `
+          <tr>
+            <td><img src="${p.image}" class="product-img" /></td>
+            <td><strong>${p.name}</strong></td>
+            <td>EGP ${p.price}</td>
+            <td>${p.brand || ''}</td>
+            <td>
+              <button class="btn outline" style="padding:5px 10px; font-size:0.8rem;" onclick="editProduct('${p.id}')">Edit</button>
+              <button class="btn danger" style="padding:5px 10px; font-size:0.8rem;" onclick="deleteProduct('${p.id}')">Delete</button>
+            </td>
+          </tr>
+        `;
+      });
+    }
+
+    function openProductModal() {
+      document.getElementById('modal-title').innerText = "Add Product";
+      document.getElementById('p-id').value = "";
+      document.getElementById('p-name').value = "";
+      document.getElementById('p-price').value = "";
+      document.getElementById('p-category').value = "";
+      document.getElementById('p-image').value = "";
+      document.getElementById('product-modal').style.display = 'flex';
+    }
+
+    function closeProductModal() {
+      document.getElementById('product-modal').style.display = 'none';
+    }
+
+    function editProduct(id) {
+      const p = editableProducts.find(x => x.id === id);
+      if(!p) return;
+      document.getElementById('modal-title').innerText = "Edit Product";
+      document.getElementById('p-id').value = p.id;
+      document.getElementById('p-name').value = p.name;
+      document.getElementById('p-price').value = p.price;
+      document.getElementById('p-category').value = p.category;
+      document.getElementById('p-image').value = p.image;
+      document.getElementById('product-modal').style.display = 'flex';
+    }
+
+    async function saveProduct() {
+      const id = document.getElementById('p-id').value || 'p_' + Date.now();
+      const name = document.getElementById('p-name').value;
+      const price = parseFloat(document.getElementById('p-price').value);
+      const category = document.getElementById('p-category').value;
+      const image = document.getElementById('p-image').value;
+      
+      if (!name || !price || !category || !image) {
+        return alert("Please fill all fields.");
+      }
+      
+      const newProduct = {
+        id, name, price, category, image,
+        badge: "",
+        sizes: [38,39,40,41,42,43,44,45],
+        images: [image, image, image]
+      };
+      
+      const idx = editableProducts.findIndex(x => x.id === id);
+      if (idx > -1) {
+        // Keep existing sizes/images if editing
+        newProduct.sizes = editableProducts[idx].sizes;
+        newProduct.images = editableProducts[idx].images;
+        editableProducts[idx] = newProduct;
+      } else {
+        editableProducts.push(newProduct);
+      }
+      
+      await saveProductsToServer();
+      closeProductModal();
+    }
+
+    async function deleteProduct(id) {
+      if(!confirm("Are you sure you want to delete this product?")) return;
+      editableProducts = editableProducts.filter(x => x.id !== id);
+      await saveProductsToServer();
+    }
+
+    async function saveProductsToServer() {
+      try {
+        const res = await fetch('/api/save_products', {
+          method: 'POST',
+          body: JSON.stringify(editableProducts)
+        });
+        if (res.ok) {
+          renderProducts();
+        } else {
+          alert("Failed to save to server.");
+        }
+      } catch(e) { alert("Server error."); }
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+

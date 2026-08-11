@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Track Order | LACED</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=1" />
+  <style>
+    .track-container {
+      max-width: 600px;
+      margin: 80px auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .track-container h1 { font-weight: 900; margin-bottom: 20px; font-size: 2.5rem; text-transform: uppercase; }
+    .track-input {
+      width: 100%;
+      padding: 15px;
+      font-size: 1.2rem;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+    }
+    .track-input:focus { outline: none; border-color: #000; }
+    
+    .btn-track {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 15px 40px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 4px;
+      text-transform: uppercase;
+      width: 100%;
+    }
+    .btn-track:hover { background: #333; }
+    
+    /* Progress Bar */
+    .progress-wrapper {
+      margin-top: 50px;
+      display: none;
+      text-align: left;
+    }
+    .progress-bar {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .progress-bar::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: #eee;
+      z-index: 1;
+      transform: translateY(-50%);
+    }
+    .progress-bar-fill {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 4px;
+      background: #000;
+      z-index: 2;
+      transform: translateY(-50%);
+      transition: width 0.5s ease;
+      width: 0%; /* 0, 50, 100 */
+    }
+    .step {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #eee;
+      z-index: 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: #999;
+    }
+    .step.active { background: #000; color: #fff; }
+    .step.completed { background: #000; color: #fff; }
+    
+    .step-labels {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .step-labels div.active { color: #000; }
+
+    #error-msg {
+      color: red;
+      margin-top: 20px;
+      display: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <svg width="120" height="40" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+          <text x="10" y="45" font-family="'Inter', sans-serif" font-size="48" font-weight="900" fill="#000" letter-spacing="-2">LACED</text>
+        </svg>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="track-container">
+    <h1>Track Your Order</h1>
+    <p style="margin-bottom: 30px; color: #666;">Enter your Order ID below to check its current status.</p>
+    
+    <input type="text" id="order-id" class="track-input" placeholder="e.g. 1000" />
+    <button class="btn-track" onclick="trackOrder()">Track Order</button>
+    
+    <div id="error-msg">Order not found. Please check your ID and try again.</div>
+
+    <div class="progress-wrapper" id="progress-wrapper">
+      <h3 style="margin-bottom: 20px; text-align: center;" id="status-title">Order Status: Pending</h3>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="pb-fill"></div>
+        <div class="step" id="step-1">1</div>
+        <div class="step" id="step-2">2</div>
+        <div class="step" id="step-3">3</div>
+      </div>
+      <div class="step-labels">
+        <div id="label-1">Pending</div>
+        <div id="label-2" style="text-align: center;">Shipped</div>
+        <div id="label-3" style="text-align: right;">Delivered</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function trackOrder() {
+      const id = document.getElementById('order-id').value.trim();
+      const errorMsg = document.getElementById('error-msg');
+      const wrapper = document.getElementById('progress-wrapper');
+      
+      if (!id) return;
+      
+      errorMsg.style.display = 'none';
+      wrapper.style.display = 'none';
+
+      try {
+        const res = await fetch('/api/orders');
+        const orders = await res.json();
+        
+        const order = orders.find(o => String(o.id) === id);
+        if (order) {
+          wrapper.style.display = 'block';
+          document.getElementById('status-title').innerText = `Order Status: ${order.status}`;
+          
+          const s1 = document.getElementById('step-1');
+          const s2 = document.getElementById('step-2');
+          const s3 = document.getElementById('step-3');
+          const l1 = document.getElementById('label-1');
+          const l2 = document.getElementById('label-2');
+          const l3 = document.getElementById('label-3');
+          const fill = document.getElementById('pb-fill');
+          
+          // Reset
+          s1.className = 'step'; s2.className = 'step'; s3.className = 'step';
+          l1.className = ''; l2.className = ''; l3.className = '';
+          
+          if (order.status === 'Pending' || order.status === 'Cancelled') {
+            s1.classList.add('active'); l1.classList.add('active');
+            fill.style.width = '0%';
+            if(order.status === 'Cancelled') {
+              document.getElementById('status-title').innerText = `Order Status: Cancelled (Ù…Ù„ØºÙŠ)`;
+              document.getElementById('status-title').style.color = 'red';
+            } else {
+              document.getElementById('status-title').style.color = 'black';
+            }
+          } 
+          else if (order.status === 'Shipped') {
+            s1.classList.add('completed'); s2.classList.add('active');
+            l1.classList.add('active'); l2.classList.add('active');
+            fill.style.width = '50%';
+            document.getElementById('status-title').style.color = 'black';
+          }
+          else if (order.status === 'Delivered') {
+            s1.classList.add('completed'); s2.classList.add('completed'); s3.classList.add('active');
+            l1.classList.add('active'); l2.classList.add('active'); l3.classList.add('active');
+            fill.style.width = '100%';
+            document.getElementById('status-title').style.color = 'green';
+          }
+        } else {
+          errorMsg.style.display = 'block';
+        }
+      } catch (e) {
+        errorMsg.innerText = "Error connecting to server.";
+        errorMsg.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+

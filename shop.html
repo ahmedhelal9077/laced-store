@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <title>Shop All | LACED</title>
+  <link rel="stylesheet" href="css/styles.css?v=639220506056575789">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container navbar">
+      <div class="hamburger">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </div>
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="LACED Logo" class="nav-logo">
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html?category=ladies">Ladies Collection</a>
+        <a href="shop.html?category=mens">Men's Collection</a>
+      </nav>
+                        <div class="nav-icons">
+        <a href="wishlist.html" style="color:white; position:relative; display:flex; align-items:center;">
+          <i class="fa-regular fa-heart" style="font-size: 1.4rem;"></i>
+          <span class="badge" id="wishlist-count">0</span>
+        </a>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const wl = JSON.parse(localStorage.getItem("laced_wishlist")||"[]");
+            const badge = document.getElementById("wishlist-count");
+            if (badge) badge.innerText = wl.length;
+          });
+        </script>
+        
+        <div class="search-icon" style="color:white; cursor:pointer; display:flex; align-items:center;">
+          <i class="fa-solid fa-magnifying-glass" style="font-size: 1.3rem;"></i>
+        </div>
+        
+        <div class="cart-icon" id="cart-icon" style="color:white; position:relative; display:flex; align-items:center; cursor:pointer;">
+          <i class="fa-solid fa-bag-shopping" style="font-size: 1.4rem;"></i>
+          <span class="badge" id="cart-count">0</span>
+        </div>
+      </div>
+    </div>
+  <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <ul class="mobile-menu-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html?category=ladies">Ladies Collection</a></li>
+        <li><a href="shop.html?category=mens">Men's Collection</a></li>
+      </ul>
+      <div class="mobile-menu-bottom">
+        <a href="#" class="login-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          Log in
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="close-cart" id="close-cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cart-total-amount">0.00 EGP</span>
+      </div>
+      <button class="btn btn-full">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Shop Section -->
+  <section class="shop-section" style="padding-top: 3rem;">
+    <div class="container">
+      <h1 class="section-title">All Footwear</h1>
+      <div class="products-grid" id="products-grid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-logo">
+            <img src="img/logo.png" alt="LACED Logo">
+          </div>
+          <p class="footer-text">Elevating your everyday steps with premium footwear designed for the modern lifestyle.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html">All Products</a></li>
+            <li><a href="shop.html?category=ladies">Ladies Collection</a></li>
+            <li><a href="shop.html?category=mens">Men's Collection</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="https://wa.me/201000000000" target="_blank">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 LACED. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-close" id="search-close">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </div>
+    <div class="search-content">
+      <input type="text" id="search-input" placeholder="Search for products..." autocomplete="off">
+      <button id="search-btn">Search</button>
+    </div>
+  </div>
+
+  <script>document.write('<script src="js/data.js?v=' + Date.now() + '"><\/script>');</script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js?v=3"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
