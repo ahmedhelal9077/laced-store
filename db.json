@@ -1,25 +1,33 @@
-{ "settings": {"promoCodes":[{"code":"LACED10","discount":10}],"payment":{"instapay":"laced@instapay","ewallet":"01000000000"},"storeInfo":{"whatsapp":"01275870139","instagram":"","facebook":"","tiktok":""},"shipping":{"freeShippingThreshold":3000},"maintenance":{"enabled":true,"message":"We're updating our store. Back soon!"},"heroBanner":{"title":"Step Into Style","subtitle":"Premium sneakers curated for the culture.","buttonText":"Shop Now"},"orderNotes":"Your order will be delivered within 3-5 business days.","adminPassword":"admin123"}
-, "orders": {
-    "customer":  {
-                     "name":  "Ahmed Helal",
-                     "phone":  "01275870139",
-                     "city":  "Other",
-                     "address":  "الجلاء"
-                 },
-    "paymentMethod":  "Visa",
-    "items":  [
-                  {
-                      "id":  8261575409727,
-                      "name":  "adidas - adidas x END. Samba \u0027Consortium Cup\u0027",
-                      "price":  2200,
-                      "image":  "https://cdn.shopify.com/s/files/1/0634/9894/4575/files/EDD784D3-E402-45AA-B07D-68547DE37454.png?v=1784314014",
-                      "size":  "37",
-                      "quantity":  1
-                  }
-              ],
-    "total":  2260,
-    "id":  1000,
-    "date":  "2026-08-11T14:12:25.0815974+03:00",
-    "status":  "Pending"
+{
+  "settings": {
+    "tiktok": "",
+    "whatsapp": "01011111111",
+    "instagram": "",
+    "facebook": "",
+    "promoCodes": []
+  },
+  "orders": {
+    "customer": {
+      "name": "Ahmed Helal",
+      "phone": "01275870139",
+      "city": "Other",
+      "address": "الجلاء"
+    },
+    "paymentMethod": "Visa",
+    "items": [
+      {
+        "id": 8261575409727,
+        "name": "adidas - adidas x END. Samba 'Consortium Cup'",
+        "price": 2200,
+        "image": "https://cdn.shopify.com/s/files/1/0634/9894/4575/files/EDD784D3-E402-45AA-B07D-68547DE37454.png?v=1784314014",
+        "size": "37",
+        "quantity": 1
+      }
+    ],
+    "total": 2260,
+    "id": 1000,
+    "date": "2026-08-11T14:12:25.0815974+03:00",
+    "status": "Pending"
+  },
+  "products": []
 }
-, "products": [] }
