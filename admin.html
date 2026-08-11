@@ -463,7 +463,7 @@
       storeSettings.adminPassword = pass1;
       
       try {
-        const res = await fetch("/api/admin/settings", {
+        const res = await fetch("/api/settings", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(storeSettings)
