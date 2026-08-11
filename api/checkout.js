@@ -1,4 +1,4 @@
-﻿const { kvGet, kvSet } = require('./kv.js');
+const { kvGet, kvSet } = require('./kv.js');
 
 module.exports = async (req, res) => {
     if (req.method === 'POST') {

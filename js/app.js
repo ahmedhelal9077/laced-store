@@ -1,4 +1,4 @@
-﻿// ===== SETTINGS LOGIC =====
+// ===== SETTINGS LOGIC =====
 window.storeSettings = {};
 fetch('/api/settings').then(r => r.json()).then(data => {
   window.storeSettings = data;

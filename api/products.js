@@ -1,4 +1,4 @@
-﻿const { kvGet } = require('./kv.js');
+const { kvGet } = require('./kv.js');
 
 module.exports = async (req, res) => {
     let products = await kvGet('products', 'js/data.js') || [];

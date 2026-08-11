@@ -1,4 +1,4 @@
-﻿{
+{
   "rewrites": [
     { "source": "/js/data.js", "destination": "/api/products" }
   ]

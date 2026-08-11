@@ -1,4 +1,4 @@
-﻿const products = [
+const products = [
 { id: 8292126097471, name: "PUMA - Speedcat OG \'New Navy Warm White", brand: "PUMA", price: 2200.00, image: "https://cdn.shopify.com/s/files/1/0634/9894/4575/files/IMG-7276.jpg?v=1785955039", isNew: true, description: "Premium imported footwear.", sizes: ["42","45"] },
 { id: 8292031561791, name: "Puma Mayze classic", brand: "Puma", price: 2200.00, image: "https://cdn.shopify.com/s/files/1/0634/9894/4575/files/IMG-7267.png?v=1785949503", isNew: true, description: "Premium imported footwear.", sizes: ["37","38","39","40","41"] },
 { id: 8276399259711, name: "PUMA Speedcat OG Women\'s Shoes in Black and White", brand: "PUMA", price: 2200.00, image: "https://cdn.shopify.com/s/files/1/0634/9894/4575/files/DE1B408C-BDB4-44CF-A34E-15C6F2926FF9.jpg?v=1785110201", isNew: true, description: "Premium imported footwear.", sizes: ["37","38","39","40","41"] },
