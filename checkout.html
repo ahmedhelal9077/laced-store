@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -273,74 +273,74 @@
       <h2>Shipping Details</h2>
               <form id="checkout-form">
           <div class="form-group">
-            <label for="name">Full Name (Ø§Ù„Ø§Ø³Ù… Ø¨Ø§Ù„ÙƒØ§Ù…Ù„)</label>
+            <label for="name">Full Name (الاسم بالكامل)</label>
             <input type="text" id="name" required placeholder="Ahmed Ali" />
           </div>
           
           <div class="form-group">
-            <label for="phone">Phone Number (Ø±Ù‚Ù… Ø§Ù„Ù‡Ø§ØªÙ)</label>
+            <label for="phone">Phone Number (رقم الهاتف)</label>
             <input type="tel" id="phone" required placeholder="01xxxxxxxxx" />
           </div>
           
           <div class="form-group">
-            <label for="city">City (Ø§Ù„Ù…Ø¯ÙŠÙ†Ø©)</label>
+            <label for="city">City (المدينة)</label>
             <select id="city" required onchange="updateShipping()">
               <option value="">Select City...</option>
               <optgroup label="Zone 1 (80 EGP)">
-                <option value="Cairo">Cairo (Ø§Ù„Ù‚Ø§Ù‡Ø±Ø©)</option>
-                <option value="Giza">Giza (Ø§Ù„Ø¬ÙŠØ²Ø©)</option>
-                <option value="Alexandria">Alexandria (Ø§Ù„Ø¥Ø³ÙƒÙ†Ø¯Ø±ÙŠØ©)</option>
+                <option value="Cairo">Cairo (القاهرة)</option>
+                <option value="Giza">Giza (الجيزة)</option>
+                <option value="Alexandria">Alexandria (الإسكندرية)</option>
               </optgroup>
               <optgroup label="Zone 2 - Delta (100 EGP)">
-                <option value="Qalyubia">Qalyubia (Ø§Ù„Ù‚Ù„ÙŠÙˆØ¨ÙŠØ©)</option>
-                <option value="Sharqia">Sharqia (Ø§Ù„Ø´Ø±Ù‚ÙŠØ©)</option>
-                <option value="Daqahlia">Daqahlia (Ø§Ù„Ø¯Ù‚Ù‡Ù„ÙŠØ©)</option>
-                <option value="Gharbia">Gharbia (Ø§Ù„ØºØ±Ø¨ÙŠØ©)</option>
-                <option value="Menoufia">Menoufia (Ø§Ù„Ù…Ù†ÙˆÙÙŠØ©)</option>
-                <option value="Beheira">Beheira (Ø§Ù„Ø¨Ø­ÙŠØ±Ø©)</option>
-                <option value="Kafr El Sheikh">Kafr El Sheikh (ÙƒÙØ± Ø§Ù„Ø´ÙŠØ®)</option>
-                <option value="Damietta">Damietta (Ø¯Ù…ÙŠØ§Ø·)</option>
-                <option value="Port Said">Port Said (Ø¨ÙˆØ±Ø³Ø¹ÙŠØ¯)</option>
-                <option value="Ismailia">Ismailia (Ø§Ù„Ø¥Ø³Ù…Ø§Ø¹ÙŠÙ„ÙŠØ©)</option>
-                <option value="Suez">Suez (Ø§Ù„Ø³ÙˆÙŠØ³)</option>
+                <option value="Qalyubia">Qalyubia (القليوبية)</option>
+                <option value="Sharqia">Sharqia (الشرقية)</option>
+                <option value="Daqahlia">Daqahlia (الدقهلية)</option>
+                <option value="Gharbia">Gharbia (الغربية)</option>
+                <option value="Menoufia">Menoufia (المنوفية)</option>
+                <option value="Beheira">Beheira (البحيرة)</option>
+                <option value="Kafr El Sheikh">Kafr El Sheikh (كفر الشيخ)</option>
+                <option value="Damietta">Damietta (دمياط)</option>
+                <option value="Port Said">Port Said (بورسعيد)</option>
+                <option value="Ismailia">Ismailia (الإسماعيلية)</option>
+                <option value="Suez">Suez (السويس)</option>
               </optgroup>
               <optgroup label="Zone 3 - Upper Egypt & Borders (120 EGP)">
-                <option value="Fayoum">Fayoum (Ø§Ù„ÙÙŠÙˆÙ…)</option>
-                <option value="Beni Suef">Beni Suef (Ø¨Ù†ÙŠ Ø³ÙˆÙŠÙ)</option>
-                <option value="Minya">Minya (Ø§Ù„Ù…Ù†ÙŠØ§)</option>
-                <option value="Assiut">Assiut (Ø£Ø³ÙŠÙˆØ·)</option>
-                <option value="Sohag">Sohag (Ø³ÙˆÙ‡Ø§Ø¬)</option>
-                <option value="Qena">Qena (Ù‚Ù†Ø§)</option>
-                <option value="Luxor">Luxor (Ø§Ù„Ø£Ù‚ØµØ±)</option>
-                <option value="Aswan">Aswan (Ø£Ø³ÙˆØ§Ù†)</option>
-                <option value="Red Sea">Red Sea (Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø±)</option>
-                <option value="New Valley">New Valley (Ø§Ù„ÙˆØ§Ø¯ÙŠ Ø§Ù„Ø¬Ø¯ÙŠØ¯)</option>
-                <option value="Matrouh">Matrouh (Ù…Ø·Ø±ÙˆØ­)</option>
-                <option value="North Sinai">North Sinai (Ø´Ù…Ø§Ù„ Ø³ÙŠÙ†Ø§Ø¡)</option>
-                <option value="South Sinai">South Sinai (Ø¬Ù†ÙˆØ¨ Ø³ÙŠÙ†Ø§Ø¡)</option>
+                <option value="Fayoum">Fayoum (الفيوم)</option>
+                <option value="Beni Suef">Beni Suef (بني سويف)</option>
+                <option value="Minya">Minya (المنيا)</option>
+                <option value="Assiut">Assiut (أسيوط)</option>
+                <option value="Sohag">Sohag (سوهاج)</option>
+                <option value="Qena">Qena (قنا)</option>
+                <option value="Luxor">Luxor (الأقصر)</option>
+                <option value="Aswan">Aswan (أسوان)</option>
+                <option value="Red Sea">Red Sea (البحر الأحمر)</option>
+                <option value="New Valley">New Valley (الوادي الجديد)</option>
+                <option value="Matrouh">Matrouh (مطروح)</option>
+                <option value="North Sinai">North Sinai (شمال سيناء)</option>
+                <option value="South Sinai">South Sinai (جنوب سيناء)</option>
               </optgroup>
             </select>
           </div>
           
           <div class="form-group">
-            <label for="address">Full Address (Ø§Ù„Ø¹Ù†ÙˆØ§Ù† Ø¨Ø§Ù„ØªÙØµÙŠÙ„)</label>
+            <label for="address">Full Address (العنوان بالتفصيل)</label>
             <input type="text" id="address" required placeholder="Street, Building, Floor, Apt" />
           </div>
 
           <div class="form-group">
-            <label>Payment Method (Ø·Ø±ÙŠÙ‚Ø© Ø§Ù„Ø¯ÙØ¹)</label>
+            <label>Payment Method (طريقة الدفع)</label>
             
             <label class="payment-method">
               <input type="radio" name="payment" value="COD" checked onchange="togglePaymentDetails()" />
-              <span>Cash on Delivery (Ø§Ù„Ø¯ÙØ¹ Ø¹Ù†Ø¯ Ø§Ù„Ø§Ø³ØªÙ„Ø§Ù…)</span>
+              <span>Cash on Delivery (الدفع عند الاستلام)</span>
             </label>
             <div id="details-cod" class="payment-details" style="display:block;">
-              Pay with cash when your order arrives. (Ø§Ù„Ø¯ÙØ¹ Ù†Ù‚Ø¯Ø§Ù‹ Ø¹Ù†Ø¯ Ø§Ø³ØªÙ„Ø§Ù… Ø§Ù„Ø£ÙˆØ±Ø¯Ø±)
+              Pay with cash when your order arrives. (الدفع نقداً عند استلام الأوردر)
             </div>
 
             <label class="payment-method">
               <input type="radio" name="payment" value="InstaPay" onchange="togglePaymentDetails()" />
-              <span>InstaPay (Ø¥Ù†Ø³ØªØ§Ø¨Ø§ÙŠ)</span>
+              <span>InstaPay (إنستاباي)</span>
             </label>
             <div id="details-instapay" class="payment-details">
               Send payment to IPA: <strong id="dynamic-instapay">laced@instapay</strong>. Order will be confirmed upon receipt.
@@ -348,7 +348,7 @@
 
             <label class="payment-method">
               <input type="radio" name="payment" value="E-Wallet" onchange="togglePaymentDetails()" />
-              <span>E-Wallet (Vodafone Cash / Ø§Ù„Ø®)</span>
+              <span>E-Wallet (Vodafone Cash / الخ)</span>
             </label>
             <div id="details-ewallet" class="payment-details">
               Transfer total to <strong id="dynamic-ewallet">010xxxxxxxx</strong>. Order will be confirmed upon receipt.
@@ -356,7 +356,7 @@
             
             <label class="payment-method">
               <input type="radio" name="payment" value="Visa" onchange="togglePaymentDetails()" />
-              <span>Visa / Mastercard (Ø§Ù„Ø¨Ø·Ø§Ù‚Ø© Ø§Ù„Ø¨Ù†ÙƒÙŠØ©)</span>
+              <span>Visa / Mastercard (البطاقة البنكية)</span>
             </label>
             <div id="details-visa" class="payment-details">
               You will be redirected to a secure payment gateway after clicking Complete Order.
