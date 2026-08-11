@@ -1,4 +1,5 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     { "source": "/js/data.js", "destination": "/api/products" }
   ]
