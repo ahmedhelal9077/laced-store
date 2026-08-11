@@ -1,13 +1,13 @@
-﻿const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const REPO = 'ahmedhelal9077/laced-store';
 
 async function getDbSha() {
-    const res = await fetch(https://api.github.com/repos/ + REPO + /contents/db.json, {
+    const res = await fetch(`https://api.github.com/repos/${REPO}/contents/db.json`, {
         headers: {
-            'Authorization': 	oken  + GITHUB_TOKEN,
+            'Authorization': `token ${GITHUB_TOKEN}`,
             'Accept': 'application/vnd.github.v3+json',
             'User-Agent': 'Vercel-App'
         },
@@ -58,15 +58,15 @@ async function kvSet(key, value) {
         
         const newContent = Buffer.from(JSON.stringify(content, null, 2)).toString('base64');
         const body = {
-            message: Update  + key,
+            message: `Update ${key}`,
             content: newContent
         };
         if (sha) body.sha = sha;
         
-        const res = await fetch(https://api.github.com/repos/ + REPO + /contents/db.json, {
+        const res = await fetch(`https://api.github.com/repos/${REPO}/contents/db.json`, {
             method: 'PUT',
             headers: {
-                'Authorization': 	oken  + GITHUB_TOKEN,
+                'Authorization': `token ${GITHUB_TOKEN}`,
                 'Accept': 'application/vnd.github.v3+json',
                 'Content-Type': 'application/json',
                 'User-Agent': 'Vercel-App'
