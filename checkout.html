@@ -451,7 +451,18 @@
 
     document.addEventListener('DOMContentLoaded', () => {
       // 1. Render cart immediately so user doesn't see EGP 0 during API fetch
-      const cart = JSON.parse(localStorage.getItem('laced_cart')) || [];
+      let cart = [];
+      try {
+        const stored = localStorage.getItem('laced_cart');
+        if (stored) cart = JSON.parse(stored);
+        if (!Array.isArray(cart)) cart = [];
+      } catch(e) {
+        cart = [];
+      }
+      
+      // Filter out nulls or invalid items
+      cart = cart.filter(item => item && typeof item === 'object' && item.price !== undefined);
+
       if (cart.length === 0) {
         window.location.href = 'shop.html';
         return;
@@ -496,8 +507,17 @@
       e.preventDefault();
       document.getElementById('loading-overlay').style.display = 'flex';
       
-      const cart = JSON.parse(localStorage.getItem('laced_cart')) || [];
-      const subtotal = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+      let cart = [];
+      try {
+        const stored = localStorage.getItem('laced_cart');
+        if (stored) cart = JSON.parse(stored);
+        if (!Array.isArray(cart)) cart = [];
+      } catch(e) {
+        cart = [];
+      }
+      cart = cart.filter(item => item && typeof item === 'object' && item.price !== undefined);
+      
+      const subtotal = cart.reduce((acc, item) => acc + (parseFloat(item.price) * (parseInt(item.quantity) || 1)), 0);
       let finalSubtotal = subtotal;
       if (globalPromoDiscount > 0) finalSubtotal = subtotal - (subtotal * (globalPromoDiscount / 100));
       const total = finalSubtotal + currentShipping;
