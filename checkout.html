@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css?v=1786500000" />
   <style>
     .checkout-container {
@@ -228,16 +228,13 @@
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </div>
       <a href="index.html" class="logo">
-        <svg width="120" height="40" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
-          <text x="10" y="45" font-family="'Inter', sans-serif" font-size="48" font-weight="900" fill="#000" letter-spacing="-2">LACED</text>
-        </svg>
+        <img src="img/logo.png" alt="LACED Logo" class="nav-logo">
       </a>
-      <div class="nav-links">
+      <nav class="nav-links">
         <a href="index.html">Home</a>
-        <a href="shop.html">Shop All</a>
-        <a href="shop.html?category=mens">Men's</a>
-        <a href="shop.html?category=ladies">Ladies</a>
-      </div>
+        <a href="shop.html?category=ladies">Ladies Collection</a>
+        <a href="shop.html?category=mens">Men's Collection</a>
+      </nav>
                         <div class="nav-icons">
         <a href="wishlist.html" style="color:white; position:relative; display:flex; align-items:center;">
           <i class="fa-regular fa-heart" style="font-size: 1.4rem;"></i>
@@ -259,6 +256,23 @@
           <i class="fa-solid fa-bag-shopping" style="font-size: 1.4rem;"></i>
           <span class="badge" id="cart-count">0</span>
         </div>
+      </div>
+    </div>
+  <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <ul class="mobile-menu-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html?category=ladies">Ladies Collection</a></li>
+        <li><a href="shop.html?category=mens">Men's Collection</a></li>
+      </ul>
+      <div class="mobile-menu-bottom">
+        <a href="#" class="login-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          Log in
+        </a>
       </div>
     </div>
   </header>
@@ -586,6 +600,7 @@
   </script>
 </body>
 </html>
+
 
 
 
