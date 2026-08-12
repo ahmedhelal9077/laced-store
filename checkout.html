@@ -332,15 +332,15 @@
             
             <label class="payment-method">
               <input type="radio" name="payment" value="COD" checked onchange="togglePaymentDetails()" />
-              <span>Cash on Delivery (Ø§Ù„Ø¯ÙØ¹ Ø¹Ù†Ø¯ Ø§Ù„Ø§Ø³ØªÙ„Ø§Ù…)</span>
+              <span>Cash on Delivery (الدفع عند الاستلام)</span>
             </label>
             <div id="details-cod" class="payment-details" style="display:block;">
-              Pay with cash when your order arrives. (Ø§Ù„Ø¯ÙØ¹ Ù†Ù‚Ø¯Ø§Ù‹ Ø¹Ù†Ø¯ Ø§Ø³ØªÙ„Ø§Ù… Ø§Ù„Ø£ÙˆØ±Ø¯Ø±)
+              Pay with cash when your order arrives. (الدفع نقداً عند استلام الأوردر)
             </div>
 
             <label class="payment-method">
               <input type="radio" name="payment" value="InstaPay" onchange="togglePaymentDetails()" />
-              <span>InstaPay (Ø¥Ù†Ø³ØªØ§Ø¨Ø§ÙŠ)</span>
+              <span>InstaPay (إنستاباي)</span>
             </label>
             <div id="details-instapay" class="payment-details">
               Send payment to IPA: <strong id="dynamic-instapay">laced@instapay</strong>. Order will be confirmed upon receipt.
@@ -348,7 +348,7 @@
 
             <label class="payment-method">
               <input type="radio" name="payment" value="E-Wallet" onchange="togglePaymentDetails()" />
-              <span>E-Wallet (Vodafone Cash / Ø§Ù„Ø®)</span>
+              <span>E-Wallet (Vodafone Cash / الخ)</span>
             </label>
             <div id="details-ewallet" class="payment-details">
               Transfer total to <strong id="dynamic-ewallet">010xxxxxxxx</strong>. Order will be confirmed upon receipt.
@@ -356,7 +356,7 @@
             
             <label class="payment-method">
               <input type="radio" name="payment" value="Visa" onchange="togglePaymentDetails()" />
-              <span>Visa / Mastercard (Ø§Ù„Ø¨Ø·Ø§Ù‚Ø© Ø§Ù„Ø¨Ù†ÙƒÙŠØ©)</span>
+              <span>Visa / Mastercard (البطاقة البنكية)</span>
             </label>
             <div id="details-visa" class="payment-details">
               You will be redirected to a secure payment gateway after clicking Complete Order.
@@ -449,14 +449,8 @@
       updateShipping(); // Recalculate totals
     };
 
-    document.addEventListener('DOMContentLoaded', async () => {
-      try {
-        const res = await fetch('/api/settings');
-        storeSettings = await res.json();
-        if (storeSettings.payment.instapay) document.getElementById('dynamic-instapay').innerText = storeSettings.payment.instapay;
-        if (storeSettings.payment.ewallet) document.getElementById('dynamic-ewallet').innerText = storeSettings.payment.ewallet;
-      } catch(e) {}
-
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Render cart immediately so user doesn't see EGP 0 during API fetch
       const cart = JSON.parse(localStorage.getItem('laced_cart')) || [];
       if (cart.length === 0) {
         window.location.href = 'shop.html';
@@ -467,14 +461,16 @@
       let subtotal = 0;
       
       cart.forEach(item => {
-        subtotal += item.price * item.quantity;
+        const itemPrice = parseFloat(item.price) || 0;
+        const itemQty = parseInt(item.quantity) || 1;
+        subtotal += itemPrice * itemQty;
         itemsContainer.innerHTML += `
           <div class="checkout-item">
             <img src="${item.image}" alt="${item.name}" />
             <div class="checkout-item-details">
               <h4>${item.name}</h4>
               <p>Size: ${item.size}</p>
-              <p>Qty: ${item.quantity} x EGP ${item.price}</p>
+              <p>Qty: ${itemQty} x EGP ${itemPrice}</p>
             </div>
           </div>
         `;
@@ -482,11 +478,18 @@
       
       document.getElementById('checkout-subtotal').innerText = `EGP ${subtotal}`;
       currentSubtotal = subtotal;
-      updateShipping(); // This will calculate and update the shipping and total based on the selected city
+      updateShipping();
 
       // Update cart count
-      const totalQty = cart.reduce((acc, item) => acc + item.quantity, 0);
+      const totalQty = cart.reduce((acc, item) => acc + (parseInt(item.quantity) || 1), 0);
       document.querySelectorAll('.cart-count').forEach(el => el.innerText = totalQty);
+
+      // 2. Fetch settings asynchronously without blocking
+      fetch('/api/settings').then(res => res.json()).then(data => {
+        storeSettings = data;
+        if (storeSettings.payment && storeSettings.payment.instapay) document.getElementById('dynamic-instapay').innerText = storeSettings.payment.instapay;
+        if (storeSettings.payment && storeSettings.payment.ewallet) document.getElementById('dynamic-ewallet').innerText = storeSettings.payment.ewallet;
+      }).catch(e => console.error('Settings fetch error:', e));
     });
 
     document.getElementById('checkout-form').addEventListener('submit', async (e) => {
