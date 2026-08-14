@@ -1,4 +1,4 @@
-﻿// ===== SETTINGS LOGIC =====
+// ===== SETTINGS LOGIC =====
 window.storeSettings = {};
 fetch('/api/settings').then(r => r.json()).then(data => {
   window.storeSettings = data;
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       <div id="ai-chatbot-window" style="display:none; position:fixed; bottom:90px; right:20px; width:300px; height:400px; background:#fff; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.2); z-index:9999; flex-direction:column; overflow:hidden; border:1px solid #ddd;">
         <div style="background:#000; color:#fff; padding:15px; font-weight:700; display:flex; justify-content:space-between; align-items:center;">
-          <div>AI Sizing Assistant ðŸ‘Ÿ</div>
+          <div>AI Sizing Assistant 👟</div>
           <button id="close-chatbot" style="background:none; border:none; color:#fff; cursor:pointer; font-size:1.2rem;">&times;</button>
         </div>
         <div id="chat-messages" style="flex:1; padding:15px; overflow-y:auto; display:flex; flex-direction:column; gap:10px; background:#fafafa;">
