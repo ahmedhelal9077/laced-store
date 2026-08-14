@@ -507,7 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
     searchIcon.addEventListener('click', () => {
       searchOverlay.classList.add('open');
       document.body.classList.add('no-scroll');
-      setTimeout(() => searchInput.focus(), 100);
+      searchInput.focus();
     });
 
     const closeSearch = () => {
@@ -667,3 +667,4 @@ window.addEventListener('settingsLoaded', () => {
         }
     }
 });
+
