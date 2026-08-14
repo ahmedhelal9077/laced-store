@@ -206,6 +206,15 @@
         
         <div style="display:grid; gap:20px; grid-template-columns:1fr 1fr; margin-top:20px;">
           
+          <!-- Product Sync -->
+          <div style="background:#fff; padding:25px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05); grid-column: 1 / -1;">
+            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">Product Sync</h3>
+            <p style="margin-bottom: 15px; color: #555;">Sync products automatically from the reference Shopify store (stockoutlet.pro). This will update your live products immediately.</p>
+            <button type="button" id="sync-products-btn" onclick="syncProducts()" style="background:#000; color:#fff; padding:12px 20px; border:none; border-radius:6px; font-weight:600; cursor:pointer; width:100%;">
+               <i class="fa-solid fa-rotate"></i> Sync Products Now
+            </button>
+          </div>
+
           <!-- Store Info -->
           <div style="background:#fff; padding:25px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
             <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">Store Info</h3>
@@ -341,7 +350,7 @@
     </div>
   </div>
 
-  <script src="js/data.js"></script>
+  <script src="/api/products"></script>
   <script>
     // --- Auth Logic ---
     async function login() {
@@ -598,7 +607,7 @@
     let editableProducts = [];
     
     function loadProducts() {
-      // products array is injected by <script src="js/data.js"> globally
+      // products array is injected by <script src="/api/products"> globally
       if (typeof products !== 'undefined') {
         editableProducts = JSON.parse(JSON.stringify(products));
         renderProducts();
@@ -702,7 +711,57 @@
         }
       } catch(e) { alert("Server error."); }
     }
-  </script>
+  
+    async function syncProducts() {
+      const btn = document.getElementById('sync-products-btn');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Syncing... Please wait';
+      btn.disabled = true;
+      try {
+        const res = await fetch('https://stockoutlet.pro/products.json?limit=250');
+        const data = await res.json();
+        
+        if (!data || !data.products) throw new Error('Invalid format');
+        
+        const mapped = data.products.map(p => {
+           let sizes = [];
+           if (p.variants && p.variants.length > 0) {
+             sizes = [...new Set(p.variants.map(v => v.title).filter(t => t !== 'Default Title'))];
+           }
+           let body = p.body_html ? p.body_html.replace(/<[^>]*>?/gm, '').substring(0, 150) : 'Premium imported footwear.';
+           return {
+             id: p.id,
+             name: p.title,
+             brand: p.vendor || 'LACED',
+             price: p.variants && p.variants[0] ? parseFloat(p.variants[0].price) : 0,
+             image: p.images && p.images.length > 0 ? p.images[0].src : '',
+             isNew: true,
+             description: body,
+             sizes: sizes.length > 0 ? sizes : ['41', '42', '43', '44', '45']
+           };
+        });
+
+        const saveRes = await fetch('/api/save_products', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(mapped)
+        });
+        
+        if (saveRes.ok) {
+          alert('Successfully synced ' + mapped.length + ' products!');
+          loadProducts();
+        } else {
+          alert('Failed to save products to server.');
+        }
+      } catch (err) {
+        console.error(err);
+        alert('Error syncing products: ' + err.message);
+      } finally {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+      }
+    }
+</script>
 </body>
 </html>
 
