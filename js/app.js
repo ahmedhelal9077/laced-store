@@ -1,4 +1,4 @@
-﻿// ===== SETTINGS LOGIC =====
+// ===== SETTINGS LOGIC =====
 window.storeSettings = {};
 fetch('/api/settings').then(r => r.json()).then(data => {
   window.storeSettings = data;
@@ -83,15 +83,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchQuery = urlParams.get('search');
 
     let filteredProducts = products;
+    const shopTitle = document.querySelector('.shop-section .section-title');
+    
     if (category === 'ladies') {
       filteredProducts = products.filter(p => p.sizes && p.sizes.some(s => parseInt(s) <= 40));
+      if (shopTitle) shopTitle.textContent = "Ladies Collection";
     } else if (category === 'mens') {
       filteredProducts = products.filter(p => p.sizes && p.sizes.some(s => parseInt(s) >= 41));
+      if (shopTitle) shopTitle.textContent = "Men's Collection";
+    } else {
+      if (shopTitle) shopTitle.textContent = "All Footwear";
     }
 
     if (searchQuery) {
       const q = searchQuery.toLowerCase();
       filteredProducts = filteredProducts.filter(p => p.name.toLowerCase().includes(q) || p.brand.toLowerCase().includes(q));
+      if (shopTitle) shopTitle.textContent = `Search Results: "${searchQuery}"`;
     }
 
     const renderPage = (page) => {
