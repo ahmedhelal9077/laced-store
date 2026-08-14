@@ -82,6 +82,37 @@
   ],
   "products": [
     {
+      "id": 8306949226559,
+      "name": "Adidas spezial blue",
+      "brand": "stock outlet",
+      "price": 1850,
+      "image": "https://cdn.shopify.com/s/files/1/0634/9894/4575/files/46F6E2DF-74C2-43A2-BF7F-9E2D6C03EA91.jpg?v=1786748488",
+      "isNew": true,
+      "description": "Premium imported footwear.",
+      "sizes": [
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
+      ]
+    },
+    {
       "id": 8292126097471,
       "name": "PUMA - Speedcat OG 'New Navy Warm White",
       "brand": "stock outlet",
@@ -90,11 +121,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": false
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": false
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -106,11 +152,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -122,11 +183,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -138,11 +214,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -154,11 +245,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -170,11 +276,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -186,11 +307,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -202,11 +338,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -218,11 +369,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -234,11 +400,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -250,8 +431,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "38",
-        "37"
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "37",
+          "available": true
+        }
       ]
     },
     {
@@ -263,11 +450,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -279,11 +481,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": false
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": false
+        }
       ]
     },
     {
@@ -295,11 +512,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": false
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -311,11 +543,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": false
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -327,11 +574,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -343,11 +605,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -359,11 +636,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": false
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -375,11 +667,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": false
+        }
       ]
     },
     {
@@ -391,11 +698,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -407,11 +729,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "43",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": false
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -423,11 +760,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        }
       ]
     },
     {
@@ -439,11 +779,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -455,15 +810,42 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -475,11 +857,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -491,11 +888,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": false
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -507,11 +919,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -523,11 +950,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -539,11 +981,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -555,11 +1012,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -571,11 +1043,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -587,11 +1074,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -603,11 +1105,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -619,11 +1136,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -635,11 +1167,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -651,11 +1198,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -667,11 +1229,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -683,11 +1260,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -699,11 +1291,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -715,11 +1322,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -731,11 +1353,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -747,10 +1384,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "41"
+        {
+          "name": "37",
+          "available": false
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -762,11 +1411,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -778,11 +1442,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -794,10 +1473,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -809,11 +1500,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -825,11 +1531,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -841,11 +1562,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": false
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -857,11 +1593,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": false
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -873,11 +1624,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": false
+        },
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "43",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -889,11 +1655,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "43",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -905,10 +1686,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        }
       ]
     },
     {
@@ -920,11 +1713,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -936,11 +1744,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -952,11 +1775,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -968,11 +1806,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -984,11 +1837,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1000,11 +1868,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": false
+        }
       ]
     },
     {
@@ -1016,7 +1899,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "0"
+        {
+          "name": "0",
+          "available": false
+        }
       ]
     },
     {
@@ -1028,11 +1914,26 @@
       "isNew": true,
       "description": "The GEL-NYC™ sneaker sources inspiration from heritage and modern performance running styles.\nIts upper construction references the GEL-NIMBUS® 3 shoe",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": false
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": false
+        }
       ]
     },
     {
@@ -1044,15 +1945,42 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -1064,10 +1992,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1079,11 +2019,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1095,11 +2050,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1111,10 +2081,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": true
+        }
       ]
     },
     {
@@ -1126,9 +2108,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1140,9 +2131,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1154,7 +2154,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37"
+        {
+          "name": "37",
+          "available": true
+        }
       ]
     },
     {
@@ -1166,11 +2169,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": false
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -1182,7 +2200,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "44"
+        {
+          "name": "44",
+          "available": true
+        }
       ]
     },
     {
@@ -1194,11 +2215,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "40",
-        "41",
-        "42",
-        "43",
-        "44"
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        }
       ]
     },
     {
@@ -1210,10 +2246,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1225,11 +2273,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -1241,10 +2304,22 @@
       "isNew": true,
       "description": "The GEL-NYC™ sneaker sources inspiration from heritage and modern performance running styles.\nIts upper construction references the GEL-NIMBUS® 3 shoe",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": false
+        }
       ]
     },
     {
@@ -1256,10 +2331,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1271,10 +2358,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": false
+        }
       ]
     },
     {
@@ -1286,11 +2385,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": false
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": false
+        }
       ]
     },
     {
@@ -1302,9 +2416,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "42",
-        "43",
-        "45"
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -1316,9 +2439,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "39",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1330,11 +2462,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1346,9 +2493,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "42",
-        "44",
-        "45"
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -1360,11 +2516,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": false
+        },
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "43",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": false
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -1376,11 +2547,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": false
+        },
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": false
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -1392,10 +2578,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1407,10 +2605,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1422,7 +2632,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "0"
+        {
+          "name": "0",
+          "available": true
+        }
       ]
     },
     {
@@ -1434,8 +2647,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        }
       ]
     },
     {
@@ -1447,11 +2666,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1463,9 +2697,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "38"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "38",
+          "available": true
+        }
       ]
     },
     {
@@ -1477,10 +2720,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1492,11 +2747,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "43",
-        "44",
-        "45",
-        "42"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        }
       ]
     },
     {
@@ -1508,8 +2778,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "38",
-        "39"
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        }
       ]
     },
     {
@@ -1521,15 +2797,42 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -1541,9 +2844,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "42",
-        "44",
-        "45"
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -1555,11 +2867,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": false
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -1571,11 +2898,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -1587,10 +2929,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "43",
+          "available": false
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -1602,11 +2956,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": false
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1618,8 +2987,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "42",
-        "45"
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -1631,10 +3006,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -1646,9 +3033,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "44"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": false
+        }
       ]
     },
     {
@@ -1660,9 +3056,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "39",
-        "41",
-        "45"
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -1674,11 +3079,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1690,15 +3110,42 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "43",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -1710,7 +3157,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41"
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1722,13 +3172,34 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "44",
-        "45"
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": false
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": false
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -1740,11 +3211,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": false
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1756,15 +3242,42 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "43",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -1776,11 +3289,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1792,10 +3320,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        }
       ]
     },
     {
@@ -1807,9 +3347,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "40",
-        "41",
-        "39"
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        }
       ]
     },
     {
@@ -1821,11 +3370,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -1837,16 +3401,46 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "Size",
-        "37",
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "Size",
+          "available": false
+        },
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -1858,11 +3452,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": false
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1874,11 +3483,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1890,8 +3514,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "38",
-        "39"
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": false
+        }
       ]
     },
     {
@@ -1903,8 +3533,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "38",
-        "41"
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": false
+        }
       ]
     },
     {
@@ -1916,15 +3552,42 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -1936,9 +3599,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "44"
+        {
+          "name": "41",
+          "available": false
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        }
       ]
     },
     {
@@ -1950,11 +3622,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -1966,10 +3653,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "40",
-        "41",
-        "42",
-        "43.3"
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43.3",
+          "available": true
+        }
       ]
     },
     {
@@ -1981,13 +3680,34 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43.3"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43.3",
+          "available": true
+        }
       ]
     },
     {
@@ -1999,7 +3719,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41"
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -2011,11 +3734,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "40",
-        "41",
-        "43.3",
-        "44",
-        "42"
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "43.3",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": false
+        }
       ]
     },
     {
@@ -2027,11 +3765,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43.3",
-        "44",
-        "45.3"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43.3",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45.3",
+          "available": true
+        }
       ]
     },
     {
@@ -2043,11 +3796,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43.3",
-        "44",
-        "45.3"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43.3",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": false
+        },
+        {
+          "name": "45.3",
+          "available": true
+        }
       ]
     },
     {
@@ -2059,11 +3827,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43.3",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43.3",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -2075,11 +3858,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45.3"
+        {
+          "name": "41",
+          "available": false
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45.3",
+          "available": true
+        }
       ]
     },
     {
@@ -2091,11 +3889,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43.3",
-        "44",
-        "45.3"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43.3",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45.3",
+          "available": true
+        }
       ]
     },
     {
@@ -2107,7 +3920,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "42"
+        {
+          "name": "42",
+          "available": true
+        }
       ]
     },
     {
@@ -2119,7 +3935,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "44"
+        {
+          "name": "44",
+          "available": true
+        }
       ]
     },
     {
@@ -2131,8 +3950,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "43"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        }
       ]
     },
     {
@@ -2144,8 +3969,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41.5",
-        "44"
+        {
+          "name": "41.5",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        }
       ]
     },
     {
@@ -2157,8 +3988,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "42",
-        "43"
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        }
       ]
     },
     {
@@ -2170,8 +4007,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "44",
-        "45.3"
+        {
+          "name": "44",
+          "available": false
+        },
+        {
+          "name": "45.3",
+          "available": false
+        }
       ]
     },
     {
@@ -2183,11 +4026,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -2199,15 +4057,42 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "43",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": false
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -2219,11 +4104,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "43.3",
-        "44",
-        "45.3",
-        "38",
-        "36"
+        {
+          "name": "43.3",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45.3",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "36",
+          "available": true
+        }
       ]
     },
     {
@@ -2235,11 +4135,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": false
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -2251,11 +4166,26 @@
       "isNew": true,
       "description": "out of stock ",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": false
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": false
+        }
       ]
     },
     {
@@ -2267,11 +4197,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41.5",
-        "42",
-        "43.5",
-        "44",
-        "45.3"
+        {
+          "name": "41.5",
+          "available": false
+        },
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "43.5",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45.3",
+          "available": true
+        }
       ]
     },
     {
@@ -2283,16 +4228,46 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "36 - 37",
-        "37",
-        "39",
-        "38",
-        "40",
-        "41",
-        "42",
-        "43.3",
-        "44",
-        "45.3"
+        {
+          "name": "36 - 37",
+          "available": true
+        },
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43.3",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45.3",
+          "available": false
+        }
       ]
     },
     {
@@ -2304,9 +4279,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "42",
-        "43.3",
-        "45.3"
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "43.3",
+          "available": false
+        },
+        {
+          "name": "45.3",
+          "available": true
+        }
       ]
     },
     {
@@ -2318,7 +4302,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "43.5"
+        {
+          "name": "43.5",
+          "available": false
+        }
       ]
     },
     {
@@ -2330,7 +4317,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "0"
+        {
+          "name": "0",
+          "available": false
+        }
       ]
     },
     {
@@ -2342,9 +4332,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "43.3",
-        "44",
-        "41.5"
+        {
+          "name": "43.3",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": false
+        },
+        {
+          "name": "41.5",
+          "available": false
+        }
       ]
     },
     {
@@ -2356,11 +4355,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "43",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": false
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -2372,7 +4386,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "45"
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -2384,9 +4401,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "43",
-        "44",
-        "45"
+        {
+          "name": "43",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -2398,10 +4424,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "42",
-        "43.3",
-        "44",
-        "45.3"
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "43.3",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": false
+        },
+        {
+          "name": "45.3",
+          "available": false
+        }
       ]
     },
     {
@@ -2413,9 +4451,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41.5",
-        "42",
-        "44"
+        {
+          "name": "41.5",
+          "available": false
+        },
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": false
+        }
       ]
     },
     {
@@ -2427,7 +4474,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "43.3"
+        {
+          "name": "43.3",
+          "available": false
+        }
       ]
     },
     {
@@ -2439,11 +4489,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43.3",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43.3",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": false
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -2455,9 +4520,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "43.3",
-        "44",
-        "45.3"
+        {
+          "name": "43.3",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45.3",
+          "available": true
+        }
       ]
     },
     {
@@ -2469,11 +4543,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -2485,10 +4574,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "44",
-        "45.3"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45.3",
+          "available": true
+        }
       ]
     },
     {
@@ -2500,9 +4601,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "43.3",
-        "45.3"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "43.3",
+          "available": true
+        },
+        {
+          "name": "45.3",
+          "available": true
+        }
       ]
     },
     {
@@ -2514,7 +4624,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37"
+        {
+          "name": "37",
+          "available": false
+        }
       ]
     },
     {
@@ -2526,9 +4639,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "39",
-        "40",
-        "41"
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -2540,12 +4662,30 @@
       "isNew": true,
       "description": "Out of stock ",
       "sizes": [
-        "36",
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "36",
+          "available": true
+        },
+        {
+          "name": "37",
+          "available": false
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": false
+        }
       ]
     },
     {
@@ -2557,16 +4697,46 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "36",
-        "37",
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "36",
+          "available": true
+        },
+        {
+          "name": "37",
+          "available": false
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": false
+        },
+        {
+          "name": "43",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -2578,10 +4748,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        }
       ]
     },
     {
@@ -2593,8 +4775,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "42",
-        "40"
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        }
       ]
     },
     {
@@ -2606,11 +4794,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": false
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -2622,11 +4825,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": false
+        }
       ]
     },
     {
@@ -2638,11 +4856,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -2654,8 +4887,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "44",
-        "45"
+        {
+          "name": "44",
+          "available": false
+        },
+        {
+          "name": "45",
+          "available": false
+        }
       ]
     },
     {
@@ -2667,10 +4906,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "42",
-        "45"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -2682,11 +4933,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -2698,8 +4964,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        }
       ]
     },
     {
@@ -2711,7 +4983,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37-38-39-40"
+        {
+          "name": "37-38-39-40",
+          "available": false
+        }
       ]
     },
     {
@@ -2723,9 +4998,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "39",
-        "40"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        }
       ]
     },
     {
@@ -2737,8 +5021,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41.5",
-        "44"
+        {
+          "name": "41.5",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": false
+        }
       ]
     },
     {
@@ -2750,9 +5040,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        }
       ]
     },
     {
@@ -2764,12 +5063,30 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "36",
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "36",
+          "available": true
+        },
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": false
+        }
       ]
     },
     {
@@ -2781,11 +5098,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": false
+        }
       ]
     },
     {
@@ -2797,9 +5129,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        }
       ]
     },
     {
@@ -2811,8 +5152,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "39"
+        {
+          "name": "37",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": false
+        }
       ]
     },
     {
@@ -2824,12 +5171,30 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "36",
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "36",
+          "available": true
+        },
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -2841,8 +5206,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "38",
-        "37"
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "37",
+          "available": false
+        }
       ]
     },
     {
@@ -2854,8 +5225,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "38",
-        "39"
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        }
       ]
     },
     {
@@ -2867,11 +5244,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": false
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": false
+        }
       ]
     },
     {
@@ -2883,7 +5275,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37"
+        {
+          "name": "37",
+          "available": true
+        }
       ]
     },
     {
@@ -2895,7 +5290,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37"
+        {
+          "name": "37",
+          "available": true
+        }
       ]
     },
     {
@@ -2907,9 +5305,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "36",
-        "38",
-        "39"
+        {
+          "name": "36",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        }
       ]
     },
     {
@@ -2921,10 +5328,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        }
       ]
     },
     {
@@ -2936,7 +5355,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "39"
+        {
+          "name": "39",
+          "available": false
+        }
       ]
     },
     {
@@ -2948,10 +5370,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -2963,11 +5397,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        }
       ]
     },
     {
@@ -2979,11 +5416,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        }
       ]
     },
     {
@@ -2995,10 +5435,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -3010,8 +5462,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "39"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": false
+        }
       ]
     },
     {
@@ -3023,11 +5481,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -3039,9 +5512,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "38",
-        "39",
-        "40"
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": false
+        }
       ]
     },
     {
@@ -3053,7 +5535,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "0"
+        {
+          "name": "0",
+          "available": true
+        }
       ]
     },
     {
@@ -3065,11 +5550,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -3081,11 +5581,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": false
+        }
       ]
     },
     {
@@ -3097,8 +5612,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "40",
-        "41"
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -3110,10 +5631,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "36",
-        "37",
-        "38",
-        "39"
+        {
+          "name": "36",
+          "available": true
+        },
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        }
       ]
     },
     {
@@ -3125,7 +5658,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "39"
+        {
+          "name": "39",
+          "available": true
+        }
       ]
     },
     {
@@ -3137,10 +5673,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        }
       ]
     },
     {
@@ -3152,7 +5700,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "38"
+        {
+          "name": "38",
+          "available": true
+        }
       ]
     },
     {
@@ -3164,11 +5715,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45.3"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45.3",
+          "available": true
+        }
       ]
     },
     {
@@ -3180,8 +5746,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        }
       ]
     },
     {
@@ -3193,9 +5765,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -3207,9 +5788,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "43.3",
-        "44",
-        "45.3"
+        {
+          "name": "43.3",
+          "available": false
+        },
+        {
+          "name": "44",
+          "available": false
+        },
+        {
+          "name": "45.3",
+          "available": false
+        }
       ]
     },
     {
@@ -3221,11 +5811,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -3237,10 +5842,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": false
+        }
       ]
     },
     {
@@ -3252,7 +5869,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "44"
+        {
+          "name": "44",
+          "available": true
+        }
       ]
     },
     {
@@ -3264,7 +5884,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "39"
+        {
+          "name": "39",
+          "available": false
+        }
       ]
     },
     {
@@ -3276,11 +5899,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": false
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -3292,8 +5930,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "38",
-        "40"
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": false
+        }
       ]
     },
     {
@@ -3305,7 +5949,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "39"
+        {
+          "name": "39",
+          "available": false
+        }
       ]
     },
     {
@@ -3317,8 +5964,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        }
       ]
     },
     {
@@ -3330,8 +5983,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "39",
-        "40"
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": false
+        }
       ]
     },
     {
@@ -3343,10 +6002,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "40",
-        "39"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": true
+        }
       ]
     },
     {
@@ -3358,9 +6029,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "38",
-        "39",
-        "37"
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "37",
+          "available": false
+        }
       ]
     },
     {
@@ -3372,7 +6052,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "39"
+        {
+          "name": "39",
+          "available": true
+        }
       ]
     },
     {
@@ -3384,7 +6067,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37"
+        {
+          "name": "37",
+          "available": true
+        }
       ]
     },
     {
@@ -3396,9 +6082,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -3410,9 +6105,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "38",
-        "40",
-        "41"
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": false
+        }
       ]
     },
     {
@@ -3424,11 +6128,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -3440,11 +6159,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        }
       ]
     },
     {
@@ -3456,12 +6178,30 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "41",
-        "42",
-        "43"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": false
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": false
+        }
       ]
     },
     {
@@ -3473,7 +6213,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "38"
+        {
+          "name": "38",
+          "available": false
+        }
       ]
     },
     {
@@ -3485,7 +6228,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "41"
+        {
+          "name": "41",
+          "available": false
+        }
       ]
     },
     {
@@ -3497,15 +6243,42 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41.5",
-        "42",
-        "43",
-        "44",
-        "45.3"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41.5",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45.3",
+          "available": true
+        }
       ]
     },
     {
@@ -3517,8 +6290,14 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "39"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        }
       ]
     },
     {
@@ -3530,7 +6309,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "39"
+        {
+          "name": "39",
+          "available": true
+        }
       ]
     },
     {
@@ -3542,7 +6324,10 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "38"
+        {
+          "name": "38",
+          "available": true
+        }
       ]
     },
     {
@@ -3554,10 +6339,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        }
       ]
     },
     {
@@ -3569,10 +6366,22 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -3584,11 +6393,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": false
+        },
+        {
+          "name": "41",
+          "available": false
+        }
       ]
     },
     {
@@ -3600,9 +6424,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        }
       ]
     },
     {
@@ -3614,9 +6447,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "39",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -3628,11 +6470,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -3644,11 +6501,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": false
+        },
+        {
+          "name": "39",
+          "available": false
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": false
+        }
       ]
     },
     {
@@ -3660,11 +6532,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -3676,9 +6563,18 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -3690,11 +6586,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     },
     {
@@ -3706,15 +6617,42 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44",
-        "45"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        },
+        {
+          "name": "42",
+          "available": true
+        },
+        {
+          "name": "43",
+          "available": true
+        },
+        {
+          "name": "44",
+          "available": true
+        },
+        {
+          "name": "45",
+          "available": true
+        }
       ]
     },
     {
@@ -3726,11 +6664,26 @@
       "isNew": true,
       "description": "Premium imported footwear.",
       "sizes": [
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
+        {
+          "name": "37",
+          "available": true
+        },
+        {
+          "name": "38",
+          "available": true
+        },
+        {
+          "name": "39",
+          "available": true
+        },
+        {
+          "name": "40",
+          "available": true
+        },
+        {
+          "name": "41",
+          "available": true
+        }
       ]
     }
   ]
