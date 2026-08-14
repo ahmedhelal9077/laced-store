@@ -1,4 +1,4 @@
-// ===== SETTINGS LOGIC =====
+﻿// ===== SETTINGS LOGIC =====
 window.storeSettings = {};
 fetch('/api/settings').then(r => r.json()).then(data => {
   window.storeSettings = data;
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="qa-size-name">${size}</div>
             <div class="qa-qty-control">
               <div class="qa-qty-inner">
-                <button class="qa-qty-btn" onclick="updateQuickAddQty(${product.id}, '${size}', -1)">−</button>
+                <button class="qa-qty-btn" onclick="updateQuickAddQty(${product.id}, '${size}', -1)">âˆ’</button>
                 <span class="qa-qty-val">${qty}</span>
                 <button class="qa-qty-btn" onclick="updateQuickAddQty(${product.id}, '${size}', 1)">+</button>
               </div>
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       <div id="ai-chatbot-window" style="display:none; position:fixed; bottom:90px; right:20px; width:300px; height:400px; background:#fff; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.2); z-index:9999; flex-direction:column; overflow:hidden; border:1px solid #ddd;">
         <div style="background:#000; color:#fff; padding:15px; font-weight:700; display:flex; justify-content:space-between; align-items:center;">
-          <div>AI Sizing Assistant 👟</div>
+          <div>AI Sizing Assistant ðŸ‘Ÿ</div>
           <button id="close-chatbot" style="background:none; border:none; color:#fff; cursor:pointer; font-size:1.2rem;">&times;</button>
         </div>
         <div id="chat-messages" style="flex:1; padding:15px; overflow-y:auto; display:flex; flex-direction:column; gap:10px; background:#fafafa;">
@@ -464,8 +464,8 @@ document.addEventListener('DOMContentLoaded', () => {
         else if (userSize) {
           reply = `If your standard EU size is ${userSize}, then a size **${userSize}** in our store will fit you perfectly! We are true to size.`;
         }
-        else if (lowerText.includes("hello") || lowerText.includes("hi") || lowerText.includes("hey") || lowerText.includes("مرحبا") || lowerText.includes("اهلا") || lowerText.includes("سلام")) {
-          reply = "Hello there! 👋 I'm your LACED sizing expert. Tell me your usual shoe brand and size, and I'll find your perfect fit!";
+        else if (lowerText.includes("hello") || lowerText.includes("hi") || lowerText.includes("hey") || lowerText.includes("Ù…Ø±Ø­Ø¨Ø§") || lowerText.includes("Ø§Ù‡Ù„Ø§") || lowerText.includes("Ø³Ù„Ø§Ù…")) {
+          reply = "Hello there! ðŸ‘‹ I'm your LACED sizing expert. Tell me your usual shoe brand and size, and I'll find your perfect fit!";
         }
         
         sendReply(reply, false);
@@ -667,4 +667,5 @@ window.addEventListener('settingsLoaded', () => {
         }
     }
 });
+
 

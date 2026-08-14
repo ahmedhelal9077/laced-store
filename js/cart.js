@@ -1,4 +1,4 @@
-class Cart {
+﻿class Cart {
   constructor() {
     this.items = JSON.parse(localStorage.getItem('laced_cart')) || [];
     this.init();
@@ -120,7 +120,8 @@ class Cart {
 }
 
 // Initialize cart globally
-const cart = new Cart();
+window.cart = new Cart();
+
 
 
 
