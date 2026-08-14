@@ -2,188 +2,294 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-  <title>Checkout | LACED</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Checkout - LACED</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css?v=1786500000" />
   <style>
-    .checkout-container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
-    
-    .checkout-form-section {
-      background: #f9f9f9;
-      padding: 30px;
-      border-radius: 8px;
-    }
-    
-    .checkout-form-section h2 {
-      margin-bottom: 20px;
-      font-size: 1.5rem;
-      border-bottom: 2px solid #000;
-      padding-bottom: 10px;
-      display: inline-block;
-    }
-    
-    .form-group {
-      margin-bottom: 20px;
-    }
-    
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-    
-    .form-group input, .form-group select {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-family: 'Inter', sans-serif;
-      font-size: 1rem;
-    }
-    
-    .form-group input:focus, .form-group select:focus {
-      outline: none;
-      border-color: #000;
-    }
-    
-    .payment-methods {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    
-    .payment-method {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: border-color 0.2s;
-    }
-    
-    .payment-method:hover {
-      border-color: #000;
-    }
-    
-    .payment-method input[type="radio"] {
-      width: 20px;
-      height: 20px;
-      accent-color: #000;
-    }
-    
-    .payment-method span {
-      font-weight: 600;
+    /* Shopify-style Checkout Layout */
+    body {
+      background-color: #fff;
+      color: #333;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
-    .payment-details {
-      display: none;
-      padding: 15px;
-      background: #eee;
-      border-radius: 4px;
-      margin-top: -5px;
-      margin-bottom: 15px;
-      font-size: 0.9rem;
-    }
-    
-    .order-summary-section {
-      padding: 30px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      height: fit-content;
-      position: sticky;
-      top: 100px;
-    }
-    
-    .order-summary-section h2 {
-      margin-bottom: 20px;
-      font-size: 1.5rem;
-    }
-    
-    .checkout-items {
-      margin-bottom: 20px;
-      max-height: 300px;
-      overflow-y: auto;
-    }
-    
-    .checkout-item {
+    .checkout-layout {
       display: flex;
-      gap: 15px;
-      margin-bottom: 15px;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 15px;
+      flex-direction: column-reverse; /* Mobile default: Summary hidden or below header */
+      min-height: 100vh;
     }
-    
-    .checkout-item img {
-      width: 80px;
-      height: 80px;
-      object-fit: cover;
-      border-radius: 4px;
+
+    .checkout-main {
+      flex: 1;
+      padding: 20px;
+      background: #fff;
     }
-    
-    .checkout-item-details h4 {
-      margin: 0 0 5px 0;
-      font-size: 1rem;
+
+    .checkout-sidebar {
+      background: #f5f5f5;
+      padding: 20px;
+      border-bottom: 1px solid #e1e1e1;
     }
-    
-    .checkout-item-details p {
-      margin: 0;
-      color: #666;
-      font-size: 0.9rem;
+
+    .checkout-header {
+      padding: 20px 0 30px 0;
+      text-align: center;
     }
-    
-    .totals {
-      border-top: 2px solid #000;
-      padding-top: 20px;
+
+    .checkout-header img {
+      max-height: 50px;
     }
-    
-    .totals-row {
+
+    @media (min-width: 1000px) {
+      .checkout-layout {
+        flex-direction: row;
+      }
+      .checkout-main {
+        flex: 55%;
+        padding: 40px 5% 40px 10%;
+        border-right: 1px solid #e1e1e1;
+      }
+      .checkout-sidebar {
+        flex: 45%;
+        padding: 40px 10% 40px 4%;
+        border-bottom: none;
+        box-shadow: inset 1px 0 0 #e1e1e1;
+      }
+      .checkout-header {
+        text-align: left;
+      }
+      .mobile-summary-toggle {
+        display: none !important;
+      }
+    }
+
+    /* Mobile Summary Toggle */
+    .mobile-summary-toggle {
+      background: #fafafa;
+      border-bottom: 1px solid #e1e1e1;
+      padding: 20px;
       display: flex;
       justify-content: space-between;
-      margin-bottom: 10px;
-      font-weight: 600;
+      align-items: center;
+      cursor: pointer;
+    }
+    .mobile-summary-toggle .toggle-text {
+      color: #000;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .mobile-summary-toggle .toggle-price {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    #mobile-summary-content {
+      display: none;
+    }
+
+    /* Typography & Sections */
+    h2.section-title {
+      font-size: 1.25rem;
+      margin: 30px 0 15px;
+      font-weight: normal;
+    }
+
+    /* Form Fields */
+    .fieldset {
+      display: grid;
+      gap: 15px;
+    }
+    .field-row {
+      display: flex;
+      gap: 15px;
+    }
+    .field-row > * {
+      flex: 1;
+    }
+    .input-box {
+      position: relative;
+    }
+    .input-box input, .input-box select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d9d9d9;
+      border-radius: 5px;
+      font-size: 0.95rem;
+      background: #fff;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      font-family: inherit;
+    }
+    .input-box input:focus, .input-box select:focus {
+      outline: none;
+      border-color: #000;
+      box-shadow: 0 0 0 1px #000;
+    }
+
+    /* Payment Methods - Shopify Style */
+    .payment-methods-box {
+      border: 1px solid #d9d9d9;
+      border-radius: 5px;
+      background: #fff;
+      overflow: hidden;
+    }
+    .payment-method-row {
+      border-bottom: 1px solid #d9d9d9;
+    }
+    .payment-method-row:last-child {
+      border-bottom: none;
+    }
+    .payment-method-label {
+      display: flex;
+      align-items: center;
+      padding: 18px;
+      cursor: pointer;
+    }
+    .payment-method-label input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      margin-right: 12px;
+      accent-color: #000;
+    }
+    .payment-method-label span {
+      font-weight: 500;
+      font-size: 0.95rem;
     }
     
-    .totals-row.grand-total {
-      font-size: 1.2rem;
-      font-weight: 800;
-      margin-top: 10px;
+    .payment-details-box {
+      background: #f4f4f4;
+      padding: 20px;
+      border-top: 1px solid #d9d9d9;
+      display: none;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #555;
     }
-    
+    .payment-details-box.active {
+      display: block;
+    }
+
+    /* Buttons */
     .checkout-btn {
       width: 100%;
-      padding: 15px;
+      padding: 18px;
       background: #000;
       color: #fff;
       border: none;
-      font-size: 1.1rem;
-      font-weight: 700;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 5px;
+      margin-top: 25px;
       cursor: pointer;
-      border-radius: 4px;
-      margin-top: 20px;
-      text-transform: uppercase;
-      font-family: 'Inter', sans-serif;
+      transition: background 0.2s;
     }
-    
     .checkout-btn:hover {
       background: #333;
     }
 
+    /* Order Summary (Sidebar) */
+    .checkout-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .checkout-item-img {
+      position: relative;
+      width: 65px;
+      height: 65px;
+      background: #fff;
+      border: 1px solid #d9d9d9;
+      border-radius: 8px;
+      margin-right: 15px;
+    }
+    .checkout-item-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .checkout-item-qty {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: rgba(114,114,114,0.9);
+      color: #fff;
+      font-size: 0.75rem;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+    }
+    .checkout-item-info {
+      flex: 1;
+    }
+    .checkout-item-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 3px;
+    }
+    .checkout-item-size {
+      font-size: 0.8rem;
+      color: #737373;
+    }
+    .checkout-item-price {
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    .summary-divider {
+      height: 1px;
+      background: #d9d9d9;
+      margin: 20px 0;
+    }
+
+    .totals-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .totals-row.total {
+      font-size: 1.2rem;
+      color: #000;
+      font-weight: bold;
+      align-items: center;
+      margin-top: 15px;
+    }
+
+    /* Promo Code */
+    .promo-box {
+      display: flex;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    .promo-box input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #d9d9d9;
+      border-radius: 5px;
+      font-size: 0.95rem;
+    }
+    .promo-box button {
+      background: #d9d9d9;
+      color: #fff;
+      border: none;
+      padding: 0 20px;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .promo-box input:not(:placeholder-shown) + button {
+      background: #000;
+    }
+
+    /* Loader */
     #loading-overlay {
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
@@ -207,100 +313,44 @@
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-    
-    @media (max-width: 768px) {
-      .checkout-container {
-        grid-template-columns: 1fr;
-        padding: 0 15px;
-      }
-      .order-summary-section {
-        position: static;
-        order: -1;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <!-- Header (Same as index.html) -->
-  <header>
-    <div class="container navbar">
-      <div class="hamburger">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      </div>
-      <a href="index.html" class="logo">
-        <img src="img/logo.png" alt="LACED Logo" class="nav-logo">
-      </a>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="shop.html?category=ladies">Ladies Collection</a>
-        <a href="shop.html?category=mens">Men's Collection</a>
-      </nav>
-                        <div class="nav-icons">
-        <a href="wishlist.html" style="color:white; position:relative; display:flex; align-items:center;">
-          <i class="fa-regular fa-heart" style="font-size: 1.4rem;"></i>
-          <span class="badge" id="wishlist-count">0</span>
-        </a>
-        <script>
-          document.addEventListener("DOMContentLoaded", () => {
-            const wl = JSON.parse(localStorage.getItem("laced_wishlist")||"[]");
-            const badge = document.getElementById("wishlist-count");
-            if (badge) badge.innerText = wl.length;
-          });
-        </script>
-        
-        <div class="search-icon" style="color:white; cursor:pointer; display:flex; align-items:center;">
-          <i class="fa-solid fa-magnifying-glass" style="font-size: 1.3rem;"></i>
-        </div>
-        
-        <div class="cart-icon" id="cart-icon" style="color:white; position:relative; display:flex; align-items:center; cursor:pointer;">
-          <i class="fa-solid fa-bag-shopping" style="font-size: 1.4rem;"></i>
-          <span class="badge" id="cart-count">0</span>
-        </div>
-      </div>
+  <!-- Mobile Summary Toggle -->
+  <div class="mobile-summary-toggle" id="mobile-toggle-btn" onclick="toggleMobileSummary()">
+    <div class="toggle-text">
+      <i class="fa-solid fa-cart-shopping" style="color: #000;"></i>
+      <span id="mobile-toggle-label">Show order summary</span>
+      <i class="fa-solid fa-chevron-down" id="mobile-toggle-icon" style="font-size: 0.8rem; margin-left: 5px;"></i>
     </div>
-  <!-- Mobile Menu -->
-    <div class="mobile-menu">
-      <ul class="mobile-menu-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html?category=ladies">Ladies Collection</a></li>
-        <li><a href="shop.html?category=mens">Men's Collection</a></li>
-      </ul>
-      <div class="mobile-menu-bottom">
-        <a href="#" class="login-btn">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-          Log in
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <div id="loading-overlay">
-    <div class="spinner"></div>
-    <h2>Processing Order...</h2>
+    <div class="toggle-price" id="mobile-total-price">EGP 0.00</div>
   </div>
 
-  <main class="checkout-container">
-    <div class="checkout-form-section">
-      <h2>Shipping Details</h2>
-              <form id="checkout-form">
-          <div class="form-group">
-            <label for="name">Full Name (الاسم بالكامل)</label>
-            <input type="text" id="name" required placeholder="Ahmed Ali" />
+  <div class="checkout-layout">
+    
+    <!-- LEFT COLUMN: Form -->
+    <div class="checkout-main">
+      <header class="checkout-header">
+        <a href="index.html" class="logo">
+          <img src="img/logo.png" alt="LACED Logo">
+        </a>
+      </header>
+
+      <form id="checkout-form">
+        
+        <h2 class="section-title" style="margin-top:0;">Contact</h2>
+        <div class="fieldset">
+          <div class="input-box">
+            <input type="tel" id="phone" required placeholder="Phone Number (رقم الهاتف)" />
           </div>
-          
-          <div class="form-group">
-            <label for="phone">Phone Number (رقم الهاتف)</label>
-            <input type="tel" id="phone" required placeholder="01xxxxxxxxx" />
-          </div>
-          
-          <div class="form-group">
-            <label for="city">City (المدينة)</label>
+        </div>
+
+        <h2 class="section-title">Delivery</h2>
+        <div class="fieldset">
+          <div class="input-box">
             <select id="city" required onchange="updateShipping()">
-              <option value="">Select City...</option>
+              <option value="">Governorate (المحافظة)...</option>
               <optgroup label="Zone 1 (80 EGP)">
                 <option value="Cairo">Cairo (القاهرة)</option>
                 <option value="Giza">Giza (الجيزة)</option>
@@ -337,145 +387,211 @@
             </select>
           </div>
           
-          <div class="form-group">
-            <label for="address">Full Address (العنوان بالتفصيل)</label>
-            <input type="text" id="address" required placeholder="Street, Building, Floor, Apt" />
+          <div class="input-box">
+            <input type="text" id="name" required placeholder="Full Name (الاسم بالكامل)" />
           </div>
+          
+          <div class="input-box">
+            <input type="text" id="address" required placeholder="Address (العنوان بالتفصيل)" />
+          </div>
+        </div>
 
-          <div class="form-group">
-            <label>Payment Method (طريقة الدفع)</label>
-            
-            <label class="payment-method">
-              <input type="radio" name="payment" value="COD" checked onchange="togglePaymentDetails()" />
-              <span>Cash on Delivery (الدفع عند الاستلام)</span>
-            </label>
-            <div id="details-cod" class="payment-details" style="display:block;">
-              Pay with cash when your order arrives. (الدفع نقداً عند استلام الأوردر)
-            </div>
-
-            <label class="payment-method">
-              <input type="radio" name="payment" value="InstaPay" onchange="togglePaymentDetails()" />
+        <h2 class="section-title">Payment</h2>
+        <p style="font-size: 0.9rem; color: #555; margin-top:-10px; margin-bottom: 15px;">All transactions are secure and encrypted.</p>
+        
+        <div class="payment-methods-box">
+          
+          <!-- InstaPay -->
+          <div class="payment-method-row">
+            <label class="payment-method-label">
+              <input type="radio" name="payment" value="InstaPay" onchange="togglePaymentDetails()" checked />
               <span>InstaPay (إنستاباي)</span>
             </label>
-            <div id="details-instapay" class="payment-details">
-              <div style="background:#f4f9f4; padding:15px; border-radius:8px; border:1px solid #c2e0c6; color:#1f3b35; margin-top:10px; font-family: 'Inter', Tahoma, Arial, sans-serif;" dir="rtl">
-                <strong style="font-size:1.1rem; display:block; margin-bottom:8px;">خطوات الدفع عبر إنستاباي:</strong>
-                ١. قم بتحويل الإجمالي إلى عنوان إنستاباي: <strong id="dynamic-instapay" style="font-size:1.1rem; color:#000;">laced@instapay</strong><br>
-                ٢. التقط سكرين شوت لإيصال التحويل.<br>
-                ٣. أرسل السكرين شوت مع اسمك ورقم الطلب على واتساب لتأكيد طلبك: <a id="dynamic-wa-instapay" href="https://wa.me/201061922430" target="_blank" style="font-weight:bold; color:#25D366; text-decoration:underline;">اضغط هنا لإرسال السكرين</a>.
+            <div id="details-InstaPay" class="payment-details-box active">
+              <div dir="rtl" style="color: #333;">
+                <strong style="display:block; margin-bottom:10px; color:#000;">طريقة الدفع عبر إنستاباي:</strong>
+                ١. قم بالتحويل إلى عنوان إنستاباي: <strong id="dynamic-instapay">laced@instapay</strong><br><br>
+                ٢. لتأكيد طلبك: يرجى إرسال سكرين شوت للتحويل على واتساب: <br>
+                <a id="dynamic-wa-instapay" href="#" target="_blank" style="display:inline-block; margin-top:8px; font-weight:bold; color:#000; text-decoration:underline;">إرسال عبر واتساب</a>
               </div>
             </div>
+          </div>
 
-            <label class="payment-method">
+          <!-- COD -->
+          <div class="payment-method-row">
+            <label class="payment-method-label">
+              <input type="radio" name="payment" value="COD" onchange="togglePaymentDetails()" />
+              <span>Cash on Delivery (الدفع عند الاستلام)</span>
+            </label>
+            <div id="details-COD" class="payment-details-box">
+              <div dir="rtl" style="color: #333; text-align:right;">
+                الدفع نقداً عند استلام الطلب من المندوب.
+              </div>
+            </div>
+          </div>
+
+          <!-- E-Wallet -->
+          <div class="payment-method-row">
+            <label class="payment-method-label">
               <input type="radio" name="payment" value="E-Wallet" onchange="togglePaymentDetails()" />
               <span>E-Wallet (Vodafone Cash / الخ)</span>
             </label>
-            <div id="details-ewallet" class="payment-details">
-              <div style="background:#f4f9f4; padding:15px; border-radius:8px; border:1px solid #c2e0c6; color:#1f3b35; margin-top:10px; font-family: 'Inter', Tahoma, Arial, sans-serif;" dir="rtl">
-                <strong style="font-size:1.1rem; display:block; margin-bottom:8px;">خطوات الدفع عبر المحفظة (فودافون كاش / الخ):</strong>
-                ١. قم بتحويل الإجمالي إلى الرقم: <strong id="dynamic-ewallet" style="font-size:1.1rem; color:#000;">010xxxxxxxx</strong><br>
-                ٢. التقط سكرين شوت لإيصال التحويل.<br>
-                ٣. أرسل السكرين شوت مع اسمك ورقم الطلب على واتساب لتأكيد طلبك: <a id="dynamic-wa-ewallet" href="https://wa.me/201061922430" target="_blank" style="font-weight:bold; color:#25D366; text-decoration:underline;">اضغط هنا لإرسال السكرين</a>.
+            <div id="details-E-Wallet" class="payment-details-box">
+              <div dir="rtl" style="color: #333;">
+                <strong style="display:block; margin-bottom:10px; color:#000;">طريقة الدفع عبر المحفظة الإلكترونية:</strong>
+                ١. قم بالتحويل إلى الرقم: <strong id="dynamic-ewallet">010xxxxxxxx</strong><br><br>
+                ٢. لتأكيد طلبك: يرجى إرسال سكرين شوت للتحويل على واتساب: <br>
+                <a id="dynamic-wa-ewallet" href="#" target="_blank" style="display:inline-block; margin-top:8px; font-weight:bold; color:#000; text-decoration:underline;">إرسال عبر واتساب</a>
               </div>
             </div>
-            
-            <label class="payment-method">
+          </div>
+          
+          <!-- Visa -->
+          <div class="payment-method-row">
+            <label class="payment-method-label">
               <input type="radio" name="payment" value="Visa" onchange="togglePaymentDetails()" />
-              <span>Visa / Mastercard (البطاقة البنكية)</span>
+              <span>Credit card</span>
+              <i class="fa-regular fa-credit-card" style="margin-left:auto; font-size:1.2rem; color:#555;"></i>
             </label>
-            <div id="details-visa" class="payment-details">
-              You will be redirected to a secure payment gateway after clicking Complete Order.
+            <div id="details-Visa" class="payment-details-box">
+              You will be redirected to a secure payment gateway to complete your purchase securely.
             </div>
           </div>
 
-          <button type="submit" class="checkout-btn">Complete Order</button>
-        </form>
+        </div>
+
+        <button type="submit" class="checkout-btn">Complete order</button>
+      </form>
     </div>
 
-    <div class="order-summary-section">
-      <h2>Order Summary</h2>
-      <div class="checkout-items" id="checkout-items">
+    <!-- RIGHT COLUMN: Order Summary -->
+    <div class="checkout-sidebar" id="mobile-summary-content">
+      <div id="checkout-items">
         <!-- Injected via JS -->
       </div>
       
-      <div class="totals">
-        <div class="form-group" style="display:flex; gap:10px; margin-bottom:15px; border-bottom: 1px solid #eee; padding-bottom:15px;">
-          <input type="text" id="promo-code" placeholder="Enter Promo Code" style="margin-bottom:0;" />
-          <button type="button" class="btn outline" onclick="applyPromo()" style="padding:10px 20px;">Apply</button>
-        </div>
-        <p id="promo-msg" style="color:#25D366; font-size:0.9rem; margin-top:-10px; margin-bottom:10px; display:none; font-weight:600;">Promo code applied (-10%)</p>
-        <div class="totals-row">
-          <span>Subtotal</span>
-          <span id="checkout-subtotal">EGP 0</span>
-        </div>
-        <div class="totals-row">
-          <span id="shipping-label">Shipping</span>
-          <span id="checkout-shipping">EGP 0</span>
-        </div>
-        <div class="totals-row grand-total">
-          <span>Total</span>
-          <span id="checkout-total">EGP 0</span>
-        </div>
+      <div class="summary-divider"></div>
+      
+      <div class="promo-box">
+        <input type="text" id="promo-code" placeholder="Discount code" oninput="this.nextElementSibling.style.background = this.value ? '#000' : '#d9d9d9';" />
+        <button type="button" onclick="applyPromo()">Apply</button>
+      </div>
+      <p id="promo-msg" style="color:#25D366; font-size:0.85rem; margin-top:-10px; margin-bottom:15px; display:none;"></p>
+
+      <div class="summary-divider"></div>
+
+      <div class="totals-row">
+        <span>Subtotal</span>
+        <span id="checkout-subtotal">EGP 0.00</span>
+      </div>
+      <div class="totals-row">
+        <span>Shipping</span>
+        <span id="checkout-shipping">Enter shipping address</span>
+      </div>
+      
+      <div class="totals-row total">
+        <span>Total</span>
+        <div><span style="font-size:0.8rem; font-weight:normal; color:#737373; margin-right:5px;">EGP</span> <span id="checkout-total">0.00</span></div>
       </div>
     </div>
-  </main>
+
+  </div>
+
+  <div id="loading-overlay">
+    <div class="spinner"></div>
+    <h2 style="font-weight: normal; margin-top: 10px;">Processing...</h2>
+  </div>
 
   <script src="js/data.js"></script>
   <script>
     let currentShipping = 0;
     let currentSubtotal = 0;
+    let globalPromoDiscount = 0;
+    let storeSettings = { promoCodes: [], payment: {} };
+
+    // Mobile Summary Toggle
+    function toggleMobileSummary() {
+      if (window.innerWidth >= 1000) return;
+      const content = document.getElementById('mobile-summary-content');
+      const label = document.getElementById('mobile-toggle-label');
+      const icon = document.getElementById('mobile-toggle-icon');
+      
+      if (content.style.display === 'block') {
+        content.style.display = 'none';
+        label.innerText = 'Show order summary';
+        icon.className = 'fa-solid fa-chevron-down';
+      } else {
+        content.style.display = 'block';
+        label.innerText = 'Hide order summary';
+        icon.className = 'fa-solid fa-chevron-up';
+      }
+    }
+
+    // Adjust display on resize
+    window.addEventListener('resize', () => {
+      const content = document.getElementById('mobile-summary-content');
+      if (window.innerWidth >= 1000) {
+        content.style.display = 'block';
+      } else {
+        content.style.display = 'none';
+        document.getElementById('mobile-toggle-label').innerText = 'Show order summary';
+        document.getElementById('mobile-toggle-icon').className = 'fa-solid fa-chevron-down';
+      }
+    });
 
     function updateShipping() {
       const city = document.getElementById('city').value;
+      const shipEl = document.getElementById('checkout-shipping');
+      
       if (!city) {
         currentShipping = 0;
+        shipEl.innerText = 'Enter shipping address';
       } else if (['Cairo', 'Giza', 'Alexandria'].includes(city)) {
         currentShipping = 80;
+        shipEl.innerText = `EGP 80.00`;
       } else if (['Qalyubia', 'Sharqia', 'Daqahlia', 'Gharbia', 'Menoufia', 'Beheira', 'Kafr El Sheikh', 'Damietta', 'Port Said', 'Ismailia', 'Suez'].includes(city)) {
         currentShipping = 100;
+        shipEl.innerText = `EGP 100.00`;
       } else {
         currentShipping = 120;
+        shipEl.innerText = `EGP 120.00`;
       }
-      document.getElementById('checkout-shipping').innerText = `EGP ${currentShipping}`;
+      
       const finalSubtotal = globalPromoDiscount > 0 ? (currentSubtotal - (currentSubtotal * (globalPromoDiscount / 100))) : currentSubtotal;
-      document.getElementById('checkout-total').innerText = `EGP ${finalSubtotal + currentShipping}`;
+      const grandTotal = finalSubtotal + currentShipping;
+      
+      document.getElementById('checkout-total').innerText = grandTotal.toLocaleString('en-US', {minimumFractionDigits: 2});
+      document.getElementById('mobile-total-price').innerText = `EGP ${grandTotal.toLocaleString('en-US', {minimumFractionDigits: 2})}`;
     }
 
     function togglePaymentDetails() {
-      document.querySelectorAll('.payment-details').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.payment-details-box').forEach(el => el.classList.remove('active'));
       const selected = document.querySelector('input[name="payment"]:checked').value;
-      if (selected === 'COD') document.getElementById('details-cod').style.display = 'block';
-      if (selected === 'InstaPay') document.getElementById('details-instapay').style.display = 'block';
-      if (selected === 'E-Wallet') document.getElementById('details-ewallet').style.display = 'block';
-      if (selected === 'Visa') document.getElementById('details-visa').style.display = 'block';
+      const detailsBox = document.getElementById(`details-${selected}`);
+      if (detailsBox) detailsBox.classList.add('active');
     }
-
-
-    let globalPromoDiscount = 0;
-    let storeSettings = { promoCodes: [], payment: {} };
 
     window.applyPromo = function() {
       const input = document.getElementById('promo-code').value.trim().toUpperCase();
       const msg = document.getElementById('promo-msg');
       if (!input) return;
       
-      const found = storeSettings.promoCodes.find(p => p.code.toUpperCase() === input);
+      const found = storeSettings.promoCodes && storeSettings.promoCodes.find(p => p.code.toUpperCase() === input);
       if (found) {
         globalPromoDiscount = found.discount;
         msg.style.display = 'block';
         msg.style.color = '#25D366';
-        msg.innerText = `Promo code applied (-${globalPromoDiscount}%)`;
+        msg.innerText = `Discount applied (-${globalPromoDiscount}%)`;
       } else {
         globalPromoDiscount = 0;
         msg.style.display = 'block';
         msg.style.color = '#ff0000';
-        msg.innerText = 'Invalid promo code';
+        msg.innerText = 'Enter a valid discount code';
       }
       updateShipping(); // Recalculate totals
     };
 
     document.addEventListener('DOMContentLoaded', () => {
-      // 1. Render cart immediately so user doesn't see EGP 0 during API fetch
       let cart = [];
       try {
         const stored = localStorage.getItem('laced_cart');
@@ -485,7 +601,6 @@
         cart = [];
       }
       
-      // Filter out nulls or invalid items
       cart = cart.filter(item => item && typeof item === 'object' && item.price !== undefined);
 
       if (cart.length === 0) {
@@ -502,33 +617,35 @@
         subtotal += itemPrice * itemQty;
         itemsContainer.innerHTML += `
           <div class="checkout-item">
-            <img src="${item.image}" alt="${item.name}" />
-            <div class="checkout-item-details">
-              <h4>${item.name}</h4>
-              <p>Size: ${item.size}</p>
-              <p>Qty: ${itemQty} x EGP ${itemPrice}</p>
+            <div class="checkout-item-img">
+              <img src="${item.image}" alt="${item.name}" />
+              <span class="checkout-item-qty">${itemQty}</span>
             </div>
+            <div class="checkout-item-info">
+              <div class="checkout-item-name">${item.name}</div>
+              <div class="checkout-item-size">${item.size}</div>
+            </div>
+            <div class="checkout-item-price">EGP ${(itemPrice * itemQty).toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
           </div>
         `;
       });
       
-      document.getElementById('checkout-subtotal').innerText = `EGP ${subtotal}`;
+      document.getElementById('checkout-subtotal').innerText = `EGP ${subtotal.toLocaleString('en-US', {minimumFractionDigits: 2})}`;
       currentSubtotal = subtotal;
       updateShipping();
 
-      // Update cart count
-      const totalQty = cart.reduce((acc, item) => acc + (parseInt(item.quantity) || 1), 0);
-      document.querySelectorAll('.cart-count').forEach(el => el.innerText = totalQty);
-
-      // 2. Fetch settings asynchronously without blocking
+      // Fetch settings asynchronously
       fetch('/api/settings').then(res => res.json()).then(data => {
-        storeSettings = data;
+        storeSettings = data || {};
         if (storeSettings.payment && storeSettings.payment.instapay) 
           document.getElementById('dynamic-instapay').innerText = storeSettings.payment.instapay;
         if (storeSettings.payment && storeSettings.payment.ewallet) 
           document.getElementById('dynamic-ewallet').innerText = storeSettings.payment.ewallet;
         
-        const waLink = (storeSettings.store && storeSettings.store.whatsapp) ? storeSettings.store.whatsapp : 'https://wa.me/201061922430';
+        const waLink = (storeSettings.storeInfo && storeSettings.storeInfo.whatsapp) 
+                        ? `https://wa.me/${storeSettings.storeInfo.whatsapp}` 
+                        : 'https://wa.me/201061922430';
+        
         document.getElementById('dynamic-wa-instapay').href = waLink;
         document.getElementById('dynamic-wa-ewallet').href = waLink;
       }).catch(e => console.error('Settings fetch error:', e));
@@ -577,32 +694,31 @@
         if (result.success) {
           localStorage.removeItem('laced_cart'); // Clear cart
           
-          // Generate WhatsApp Link
           let waText = `*New Order #${result.orderId}*%0A`;
           waText += `Name: ${orderData.customer.name}%0APhone: ${orderData.customer.phone}%0ACity: ${orderData.customer.city}%0A`;
           waText += `Payment: ${orderData.paymentMethod}%0A%0A*Items:*%0A`;
           cart.forEach(i => {
             waText += `- ${i.quantity}x ${i.name} (Size: ${i.size})%0A`;
           });
-          waText += `%0A*Total: EGP ${total}*`;
+          waText += `%0A*Total: EGP ${total.toLocaleString()}*`;
           
-          const waLink = `https://wa.me/${storeSettings.storeInfo?.whatsapp || '}?text=${waText}`;
+          const phoneNum = (storeSettings.storeInfo && storeSettings.storeInfo.whatsapp) ? storeSettings.storeInfo.whatsapp : '201061922430';
+          const waLink = `https://wa.me/${phoneNum}?text=${waText}`;
           
-          // Replace document with success message and redirect
           document.body.innerHTML = `
             <div style="height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; font-family:Inter,sans-serif; text-align:center; padding:20px;">
               <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:20px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
               <h1>Order Confirmed!</h1>
               <p>Your order number is <strong>#${result.orderId}</strong>.</p><p style="color:#555; margin-top:10px;">${storeSettings.orderNotes || ""}</p>
               <p>Redirecting you to WhatsApp to complete your order...</p>
-              <a href="${waLink}" style="margin-top:20px; padding:15px 30px; background:#25D366; color:#fff; text-decoration:none; border-radius:30px; font-weight:bold;">Open WhatsApp Now</a>
+              <a href="${waLink}" style="margin-top:20px; padding:15px 30px; background:#25D366; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold;">Open WhatsApp Now</a>
               <a href="index.html" style="margin-top:15px; color:#666; text-decoration:underline;">Return to Store</a>
             </div>
           `;
           
           setTimeout(() => {
             window.location.href = waLink;
-          }, 3000);
+          }, 2000);
           
         } else {
           alert('Error processing order. Please try again.');
@@ -610,26 +726,10 @@
         }
       } catch (err) {
         console.error(err);
-        alert('Could not connect to server. Ensure server_tcp.ps1 is running.');
+        alert('Could not connect to server.');
         document.getElementById('loading-overlay').style.display = 'none';
       }
     });
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
