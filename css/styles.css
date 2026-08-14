@@ -214,7 +214,7 @@ header {
   .hamburger { display: block; }
   
   .products-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
   }
   
@@ -1114,5 +1114,16 @@ a, button, input, select, textarea, .btn, .category-card, .product-card, .produc
 .product-img-wrap img {
   width: 100%;
   height: auto;
+}
+
+
+
+/* Further mobile layout fixes */
+html {
+  overflow-x: hidden;
+}
+.product-name {
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
