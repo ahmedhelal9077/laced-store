@@ -1,4 +1,4 @@
-﻿class Cart {
+class Cart {
   constructor() {
     this.items = JSON.parse(localStorage.getItem('laced_cart')) || [];
     this.init();
@@ -36,12 +36,15 @@
     }
   }
 
-  addItem(product, size, quantity) {
+  addItem(product, size, quantity, openCart = true) {
     const existingItemIndex = this.items.findIndex(item => item.id === product.id && item.size === size);
     
     if (existingItemIndex > -1) {
       this.items[existingItemIndex].quantity += quantity;
-    } else {
+        if (this.items[existingItemIndex].quantity <= 0) {
+          this.items.splice(existingItemIndex, 1);
+        }
+      } else if (quantity > 0) {
       this.items.push({
         id: product.id,
         name: product.name,
@@ -55,7 +58,7 @@
     this.saveCart();
     this.updateCartCount();
     this.renderCart();
-    this.toggleCart(true); // Open cart after adding
+    if (openCart) this.toggleCart(true); // Open cart after adding
   }
 
   removeItem(index) {
@@ -118,4 +121,6 @@
 
 // Initialize cart globally
 const cart = new Cart();
+
+
 

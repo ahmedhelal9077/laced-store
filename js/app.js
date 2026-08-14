@@ -55,22 +55,135 @@ document.addEventListener('DOMContentLoaded', () => {
   const generateProductCard = (product) => {
     return `
       <div class="product-card">
-        <a href="product.html?id=${product.id}">
-          <div class="product-img-wrap">
+        <div class="product-img-wrap">
+          <a href="product.html?id=${product.id}">
             <img src="${product.image}" alt="${product.name}" class="product-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x600?text=LACED';">
-            <span class="sale-badge">Sale</span>
+          </a>
+          <span class="sale-badge">Sale</span>
+        </div>
+        <div class="product-info">
+          <a href="product.html?id=${product.id}" class="product-name" style="text-decoration:none; color:inherit;">${product.name}</a>
+          <div class="product-price-container">
+            <div class="product-old-price">LE ${(product.price + 300).toFixed(2)} EGP</div>
+            <div class="product-price">LE ${product.price.toFixed(2)} EGP</div>
           </div>
-          <div class="product-info">
-            <div class="product-name">${product.name}</div>
-            <div class="product-price-container">
-              <div class="product-old-price">LE ${(product.price + 300).toFixed(2)} EGP</div>
-              <div class="product-price">LE ${product.price.toFixed(2)} EGP</div>
-            </div>
-            <div class="btn-choose">Choose options</div>
-          </div>
-        </a>
+          <button class="btn-choose" onclick="openQuickAddModal(${product.id})">Choose options</button>
+        </div>
       </div>
     `;
+  };
+
+  window.openQuickAddModal = (productId) => {
+    const product = products.find(p => p.id === productId);
+    if (!product) return;
+  
+    let modal = document.getElementById('quick-add-modal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'quick-add-modal';
+      modal.className = 'quick-add-modal';
+      document.body.appendChild(modal);
+    }
+  
+    const getVariantQty = (size) => {
+      if (!window.cart) return 0;
+      const item = window.cart.items.find(i => i.id === product.id && i.size === size);
+      return item ? item.quantity : 0;
+    };
+  
+    const renderModalContent = () => {
+      let totalItems = 0;
+      let totalPrice = 0;
+      
+      const sizesHtml = product.sizes.map(size => {
+        const qty = getVariantQty(size);
+        totalItems += qty;
+        totalPrice += (qty * product.price);
+        return `
+          <div class="qa-size-row">
+            <div class="qa-size-name">${size}</div>
+            <div class="qa-qty-control">
+              <div class="qa-qty-inner">
+                <button class="qa-qty-btn" onclick="updateQuickAddQty(${product.id}, '${size}', -1)">−</button>
+                <span class="qa-qty-val">${qty}</span>
+                <button class="qa-qty-btn" onclick="updateQuickAddQty(${product.id}, '${size}', 1)">+</button>
+              </div>
+            </div>
+            <div class="qa-price-col">
+              <span class="old">LE ${(product.price + 300).toFixed(2)}</span>
+              LE ${product.price.toFixed(2)}/ea
+            </div>
+            <div class="qa-total-col">LE ${(qty * product.price).toFixed(2)}</div>
+          </div>
+        `;
+      }).join('');
+  
+      modal.innerHTML = `
+        <div class="quick-add-container">
+          <div class="quick-add-close" onclick="closeQuickAddModal()">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="quick-add-left">
+            <div>
+              <div class="quick-add-img-wrap">
+                <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x600?text=LACED';">
+              </div>
+              <a href="product.html?id=${product.id}" class="quick-add-details-link">View full details <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="quick-add-right">
+            <div class="quick-add-title">${product.name}</div>
+            <div class="quick-add-price">
+              <span class="old">LE ${(product.price + 300).toFixed(2)} EGP</span>
+              LE ${product.price.toFixed(2)} EGP
+            </div>
+            
+            <div class="quick-add-table-header">
+              <div class="qa-col-var">VARIANT</div>
+              <div class="qa-col-qty">QUANTITY</div>
+              <div class="qa-col-price">PRICE</div>
+              <div class="qa-col-total">VARIANT TOTAL</div>
+            </div>
+            
+            <div class="quick-add-sizes-list">
+              ${sizesHtml}
+            </div>
+            
+            <div class="quick-add-footer">
+              <button class="qa-view-cart-btn" onclick="closeQuickAddModal(); window.cart.toggleCart(true);">View cart</button>
+              <div class="qa-summary-col">
+                <div class="qa-summary-items"><span>${totalItems}</span> Total items</div>
+                <div class="qa-summary-total">LE ${totalPrice.toFixed(2)}</div>
+                <div class="qa-summary-note">Taxes, discounts and shipping calculated at checkout.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    };
+  
+    renderModalContent();
+    window.currentQuickAddRender = renderModalContent;
+  
+    modal.classList.add('open');
+    document.body.classList.add('no-scroll');
+  };
+  
+  window.closeQuickAddModal = () => {
+    const modal = document.getElementById('quick-add-modal');
+    if (modal) {
+      modal.classList.remove('open');
+      document.body.classList.remove('no-scroll');
+    }
+  };
+  
+  window.updateQuickAddQty = (productId, size, delta) => {
+    const product = products.find(p => p.id === productId);
+    if (!product || !window.cart) return;
+    window.cart.addItem(product, size, delta, false);
+    if (window.currentQuickAddRender) {
+      window.currentQuickAddRender();
+    }
   };
 
   // ===== SHOP PAGE (with pagination) =====
