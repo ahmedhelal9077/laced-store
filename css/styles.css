@@ -1099,3 +1099,20 @@ a, button, input, select, textarea, .btn, .category-card, .product-card, .produc
   .qa-qty-control { flex: 1; justify-content: flex-start; }
   .qa-total-col { flex: 1; text-align: right; }
 }
+
+/* Fix for product card links blowing out grid */
+.product-img-wrap a {
+  display: block;
+  width: 100%;
+}
+
+
+/* Prevent grid blowout on mobile */
+.product-card {
+  min-width: 0;
+}
+.product-img-wrap img {
+  width: 100%;
+  height: auto;
+}
+
