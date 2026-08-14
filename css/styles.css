@@ -1123,8 +1123,7 @@ html {
   overflow-x: hidden;
 }
 .product-name {
-  word-break: break-word;
-  overflow-wrap: break-word;
+  
 }
 
 
@@ -1169,5 +1168,16 @@ html, body {
   height: 100%;
   object-fit: contain;
   max-width: 100%;
+}
+
+
+
+/* Fix Safari text collapse */
+.product-info {
+  width: 100%;
+  max-width: 100%;
+}
+.product-name {
+  width: 100%;
 }
 
