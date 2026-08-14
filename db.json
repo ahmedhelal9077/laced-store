@@ -1,0 +1,45 @@
+{
+  "settings": {},
+  "orders": [
+    {
+      "customer": {
+        "name": "Ahmed Hlal",
+        "phone": "01275870139",
+        "city": "Gharbia",
+        "address": "Rya"
+      },
+      "paymentMethod": "InstaPay",
+      "items": [
+        {
+          "id": 8276399259711,
+          "name": "PUMA Speedcat OG Women's Shoes in Black and White",
+          "price": 2200,
+          "image": "https://cdn.shopify.com/s/files/1/0634/9894/4575/files/DE1B408C-BDB4-44CF-A34E-15C6F2926FF9.jpg?v=1785110201",
+          "size": "40",
+          "quantity": 2
+        },
+        {
+          "id": 8276387561535,
+          "name": "Puma Speedcat OG trainers in brown and off white",
+          "price": 2200,
+          "image": "https://cdn.shopify.com/s/files/1/0634/9894/4575/files/F00F6F71-934F-496D-B983-02D726BF3BC4.jpg?v=1785109354",
+          "size": "37",
+          "quantity": 1
+        },
+        {
+          "id": 8292031561791,
+          "name": "Puma Mayze classic",
+          "price": 2200,
+          "image": "https://cdn.shopify.com/s/files/1/0634/9894/4575/files/IMG-7267.png?v=1785949503",
+          "size": "37",
+          "quantity": 1
+        }
+      ],
+      "total": 8900,
+      "id": 1000,
+      "date": "2026-08-14T17:38:42.870Z",
+      "status": "Pending"
+    }
+  ],
+  "products": []
+}
