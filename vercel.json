@@ -1,7 +1,3 @@
 {
-  "cleanUrls": true,
-  "ignoreCommand": "exit 1",
-  "rewrites": [
-    { "source": "/js/data.js", "destination": "/api/products" }
-  ]
+  "outputDirectory": "."
 }

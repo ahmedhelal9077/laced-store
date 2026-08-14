@@ -710,6 +710,21 @@
         if (result.success) {
           localStorage.removeItem('laced_cart'); // Clear cart
           
+          if (result.paymobUrl) {
+              document.body.innerHTML = `
+                <div style="height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; font-family:Inter,sans-serif; text-align:center; padding:20px;">
+                  <div class="loader" style="border: 4px solid #f3f3f3; border-top: 4px solid #000; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin-bottom: 20px;"></div>
+                  <style>@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }</style>
+                  <h1>Redirecting to secure payment gateway...</h1>
+                  <p>Please wait while we transfer you to complete your Visa payment.</p>
+                </div>
+              `;
+              setTimeout(() => {
+                window.location.href = result.paymobUrl;
+              }, 1500);
+              return;
+          }
+
           let waText = `*New Order #${result.orderId}*%0A`;
           waText += `Name: ${orderData.customer.name}%0APhone: ${orderData.customer.phone}%0ACity: ${orderData.customer.city}%0A`;
           waText += `Payment: ${orderData.paymentMethod}%0A%0A*Items:*%0A`;
@@ -737,7 +752,7 @@
           }, 2000);
           
         } else {
-          alert('Error processing order. Please try again.');
+          alert('Error processing order: ' + (result.error || 'Please try again.'));
           document.getElementById('loading-overlay').style.display = 'none';
         }
       } catch (err) {
