@@ -376,21 +376,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== SEARCH =====
+  // ===== SEARCH (MODERN) =====
   const searchIcon = document.querySelector('.search-icon');
   const searchOverlay = document.getElementById('search-overlay');
   const searchClose = document.getElementById('search-close');
   const searchInput = document.getElementById('search-input');
   const searchBtn = document.getElementById('search-btn');
+  const searchClear = document.getElementById('search-clear');
+  const searchResultsArea = document.getElementById('search-results-area');
+  const searchFooterBar = document.getElementById('search-footer-bar');
+  const searchSuggestionsList = document.getElementById('search-suggestions-list');
+  const searchProductsList = document.getElementById('search-products-list');
+  const searchTermDisplay = document.getElementById('search-term-display');
+  const searchAllLink = document.getElementById('search-all-link');
 
   if (searchIcon && searchOverlay) {
     searchIcon.addEventListener('click', () => {
       searchOverlay.classList.add('open');
+      document.body.classList.add('no-scroll');
       setTimeout(() => searchInput.focus(), 100);
     });
 
-    searchClose.addEventListener('click', () => {
+    const closeSearch = () => {
       searchOverlay.classList.remove('open');
+      document.body.classList.remove('no-scroll');
+      searchInput.value = '';
+      updateSearchResults('');
+    };
+
+    searchClose.addEventListener('click', closeSearch);
+    
+    searchOverlay.addEventListener('click', (e) => {
+      if (e.target === searchOverlay) closeSearch();
     });
 
     const performSearch = () => {
@@ -401,9 +418,76 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     searchBtn.addEventListener('click', performSearch);
+    
+    searchClear.addEventListener('click', () => {
+      searchInput.value = '';
+      updateSearchResults('');
+      searchInput.focus();
+    });
+
     searchInput.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') performSearch();
     });
+
+    searchInput.addEventListener('input', (e) => {
+      updateSearchResults(e.target.value.trim());
+    });
+
+    function updateSearchResults(query) {
+      if (!query) {
+        searchClear.style.display = 'none';
+        searchResultsArea.style.display = 'none';
+        searchFooterBar.style.display = 'none';
+        return;
+      }
+
+      searchClear.style.display = 'block';
+      const q = query.toLowerCase();
+      searchTermDisplay.textContent = query;
+      searchAllLink.href = 'shop.html?search=' + encodeURIComponent(query);
+      
+      const matchedProducts = products.filter(p => p.name.toLowerCase().includes(q) || p.brand.toLowerCase().includes(q)).slice(0, 6);
+
+      if (matchedProducts.length > 0) {
+        searchResultsArea.style.display = 'flex';
+        searchFooterBar.style.display = 'flex';
+        
+        const suggestions = new Set();
+        matchedProducts.forEach(p => {
+          suggestions.add(p.name);
+        });
+        
+        searchSuggestionsList.innerHTML = Array.from(suggestions).slice(0, 5).map(s => {
+          const idx = s.toLowerCase().indexOf(q);
+          if (idx === -1) return `<li><span class="rest">${s}</span></li>`;
+          const before = s.substring(0, idx);
+          const match = s.substring(idx, idx + q.length);
+          const after = s.substring(idx + q.length);
+          return `<li onclick="window.location.href='shop.html?search=${encodeURIComponent(s)}'"><span class="match">${before}</span><span class="rest">${match}</span><span class="match">${after}</span></li>`;
+        }).join('');
+
+        searchProductsList.innerHTML = matchedProducts.slice(0, 4).map(p => {
+          const s = p.name;
+          const idx = s.toLowerCase().indexOf(q);
+          let titleHtml = s;
+          if (idx !== -1) {
+            const before = s.substring(0, idx);
+            const match = s.substring(idx, idx + q.length);
+            const after = s.substring(idx + q.length);
+            titleHtml = `<span class="match">${before}</span><span class="rest">${match}</span><span class="match">${after}</span>`;
+          }
+          return `
+            <a href="product.html?id=${p.id}" class="search-product-item">
+              <img src="${p.image}" alt="${p.name}" onerror="this.onerror=null; this.src='https://via.placeholder.com/60x60?text=LACED';">
+              <div class="title">${titleHtml}</div>
+            </a>
+          `;
+        }).join('');
+      } else {
+        searchResultsArea.style.display = 'none';
+        searchFooterBar.style.display = 'none';
+      }
+    }
   }
 });
 

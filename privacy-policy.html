@@ -137,14 +137,37 @@
     </div>
   </footer>
 
-  <!-- Search Overlay -->
+    <!-- Search Overlay -->
   <div class="search-overlay" id="search-overlay">
-    <div class="search-close" id="search-close">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-    </div>
-    <div class="search-content">
-      <input type="text" id="search-input" placeholder="Search for products..." autocomplete="off">
-      <button id="search-btn">Search</button>
+    <div class="search-container-modern">
+      <div class="search-top-bar">
+        <div class="search-input-group">
+          <span class="search-label">Search</span>
+          <input type="text" id="search-input" placeholder="" autocomplete="off" autofocus>
+        </div>
+        <div class="search-actions">
+          <button class="search-clear" id="search-clear" style="display:none;"><i class="fa-solid fa-xmark"></i></button>
+          <button class="search-btn-icon" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <div class="search-close" id="search-close">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </div>
+        </div>
+      </div>
+      
+      <div class="search-results-area" id="search-results-area" style="display:none;">
+        <div class="search-suggestions-col">
+          <h4 class="col-title">SUGGESTIONS</h4>
+          <ul id="search-suggestions-list"></ul>
+        </div>
+        <div class="search-products-col">
+          <h4 class="col-title">PRODUCTS</h4>
+          <div id="search-products-list"></div>
+        </div>
+      </div>
+      
+      <div class="search-footer-bar" id="search-footer-bar" style="display:none;">
+        <a href="#" id="search-all-link">Search for "<span id="search-term-display"></span>" <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
     </div>
   </div>
 
@@ -153,6 +176,7 @@
   <script src="js/app.js?v=639220490160019458"></script>
 </body>
 </html>
+
 
 
 
