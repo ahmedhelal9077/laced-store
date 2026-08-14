@@ -15,17 +15,17 @@
   <!-- Header -->
   <header>
     <div class="container navbar">
-      <a href="index.html" class="logo">
+      <a href="/" class="logo">
         <svg width="120" height="40" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
           <text x="10" y="45" font-family="'Inter', sans-serif" font-size="48" font-weight="900" fill="#000" letter-spacing="-2">LACED</text>
         </svg>
       </a>
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
+        <a href="/">Home</a>
+        <a href="/shop">Shop</a>
       </div>
                         <div class="nav-icons">
-        <a href="wishlist.html" style="color:white; position:relative; display:flex; align-items:center;">
+        <a href="/wishlist" style="color:white; position:relative; display:flex; align-items:center;">
           <i class="fa-regular fa-heart" style="font-size: 1.4rem;"></i>
           <span class="badge" id="wishlist-count">0</span>
         </a>
@@ -75,7 +75,7 @@
     
     <div id="empty-wishlist" style="display:none; text-align:center; padding: 50px 0;">
       <h2 style="color: #999; margin-bottom: 20px;">Your wishlist is currently empty.</h2>
-      <a href="shop.html" class="btn" style="background:#000; color:#fff; padding:15px 30px; text-decoration:none; border-radius:4px; font-weight:700;">Explore Sneakers</a>
+      <a href="/shop" class="btn" style="background:#000; color:#fff; padding:15px 30px; text-decoration:none; border-radius:4px; font-weight:700;">Explore Sneakers</a>
     </div>
   </section>
 
@@ -101,7 +101,7 @@
               <button class="wishlist-btn active" onclick="removeWishlistItem(event, ${product.id}, this)" style="position:absolute; top:10px; right:10px; z-index:10; background:#fff; border:none; width:36px; height:36px; border-radius:50%; display:flex; justify-content:center; align-items:center; cursor:pointer; box-shadow:0 2px 5px rgba(0,0,0,0.1); color:#ff0000;">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
               </button>
-              <a href="product.html?id=${product.id}">
+              <a href="/product?id=${product.id}">
                 <div class="product-img-wrap">
                   <img src="${product.image}" alt="${product.name}" class="product-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x600?text=LACED';">
                   <span class="sale-badge">Sale</span>

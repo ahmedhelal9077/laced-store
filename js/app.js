@@ -4,8 +4,8 @@ fetch('/api/settings').then(r => r.json()).then(data => {
   window.storeSettings = data;
   
   if (data.maintenance && data.maintenance.enabled) {
-    if (!window.location.pathname.includes('admin.html') && !window.location.pathname.includes('maintenance.html')) {
-      window.location.href = 'maintenance.html';
+    if (!window.location.pathname.includes('admin') && !window.location.pathname.includes('maintenance')) {
+      window.location.href = 'maintenance';
       return;
     }
   }
@@ -56,13 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
     return `
       <div class="product-card">
         <div class="product-img-wrap">
-          <a href="product.html?id=${product.id}">
+          <a href="product?id=${product.id}">
             <img src="${product.image}" alt="${product.name}" class="product-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x600?text=LACED';">
           </a>
           <span class="sale-badge">Sale</span>
         </div>
         <div class="product-info">
-          <a href="product.html?id=${product.id}" class="product-name" style="text-decoration:none; color:inherit;">${product.name}</a>
+          <a href="product?id=${product.id}" class="product-name" style="text-decoration:none; color:inherit;">${product.name}</a>
           <div class="product-price-container">
             <div class="product-old-price">LE ${(product.price + 300).toFixed(2)} EGP</div>
             <div class="product-price">LE ${product.price.toFixed(2)} EGP</div>
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <div class="quick-add-img-wrap">
                 <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x600?text=LACED';">
               </div>
-              <a href="product.html?id=${product.id}" class="quick-add-details-link">View full details <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="product?id=${product.id}" class="quick-add-details-link">View full details <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
           <div class="quick-add-right">
@@ -388,11 +388,11 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('buy-now-btn').addEventListener('click', () => {
         if (!selectedSize) { alert('Please select a size first.'); return; }
         cart.addItem(product, selectedSize, quantity);
-        window.location.href = 'checkout.html';
+        window.location.href = 'checkout';
       });
     } else {
       productGallery.style.display = 'none';
-      productDetailContainer.innerHTML = '<h2>Product not found</h2><a href="shop.html" style="margin-top:20px; display:inline-block; text-decoration:underline;">Back to Shop</a>';
+      productDetailContainer.innerHTML = '<h2>Product not found</h2><a href="shop" style="margin-top:20px; display:inline-block; text-decoration:underline;">Back to Shop</a>';
     }
   }
 
@@ -549,7 +549,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const performSearch = () => {
       const query = searchInput.value.trim();
       if (query) {
-        window.location.href = 'shop.html?search=' + encodeURIComponent(query);
+        window.location.href = 'shop?search=' + encodeURIComponent(query);
       }
     };
 
@@ -580,7 +580,7 @@ document.addEventListener('DOMContentLoaded', () => {
       searchClear.style.display = 'block';
       const q = query.toLowerCase();
       searchTermDisplay.textContent = query;
-      searchAllLink.href = 'shop.html?search=' + encodeURIComponent(query);
+      searchAllLink.href = 'shop?search=' + encodeURIComponent(query);
       
       const matchedProducts = products.filter(p => p.name.toLowerCase().includes(q) || p.brand.toLowerCase().includes(q)).slice(0, 6);
 
@@ -599,7 +599,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const before = s.substring(0, idx);
           const match = s.substring(idx, idx + q.length);
           const after = s.substring(idx + q.length);
-          return `<li onclick="window.location.href='shop.html?search=${encodeURIComponent(s)}'"><span class="match">${before}</span><span class="rest">${match}</span><span class="match">${after}</span></li>`;
+          return `<li onclick="window.location.href='shop?search=${encodeURIComponent(s)}'"><span class="match">${before}</span><span class="rest">${match}</span><span class="match">${after}</span></li>`;
         }).join('');
 
         searchProductsList.innerHTML = matchedProducts.slice(0, 4).map(p => {
@@ -613,7 +613,7 @@ document.addEventListener('DOMContentLoaded', () => {
             titleHtml = `<span class="match">${before}</span><span class="rest">${match}</span><span class="match">${after}</span>`;
           }
           return `
-            <a href="product.html?id=${p.id}" class="search-product-item">
+            <a href="product?id=${p.id}" class="search-product-item">
               <img src="${p.image}" alt="${p.name}" onerror="this.onerror=null; this.src='https://via.placeholder.com/60x60?text=LACED';">
               <div class="title">${titleHtml}</div>
             </a>
