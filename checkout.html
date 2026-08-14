@@ -67,6 +67,9 @@
       .mobile-summary-toggle {
         display: none !important;
       }
+      #mobile-summary-content {
+        display: block !important;
+      }
     }
 
     /* Mobile Summary Toggle */
@@ -523,7 +526,10 @@
       const label = document.getElementById('mobile-toggle-label');
       const icon = document.getElementById('mobile-toggle-icon');
       
-      if (content.style.display === 'block') {
+      // Check computed style to handle !important from CSS properly
+      const isHidden = window.getComputedStyle(content).display === 'none';
+      
+      if (!isHidden) {
         content.style.display = 'none';
         label.innerText = 'Show order summary';
         icon.className = 'fa-solid fa-chevron-down';
@@ -534,17 +540,20 @@
       }
     }
 
-    // Adjust display on resize
-    window.addEventListener('resize', () => {
+    function applyResponsiveLayout() {
       const content = document.getElementById('mobile-summary-content');
       if (window.innerWidth >= 1000) {
-        content.style.display = 'block';
+        content.style.display = ''; // Let CSS handle it with !important
       } else {
         content.style.display = 'none';
         document.getElementById('mobile-toggle-label').innerText = 'Show order summary';
         document.getElementById('mobile-toggle-icon').className = 'fa-solid fa-chevron-down';
       }
-    });
+    }
+
+    // Adjust display on resize and initial load
+    window.addEventListener('resize', applyResponsiveLayout);
+    window.addEventListener('DOMContentLoaded', applyResponsiveLayout);
 
     function updateShipping() {
       const city = document.getElementById('city').value;
