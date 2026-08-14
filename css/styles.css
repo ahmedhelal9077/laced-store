@@ -1212,3 +1212,25 @@ html, body {
 .gw-size-select:disabled, .gw-size-select option:disabled {
   color: #ccc;
 }
+
+.prod-buy-now-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #aeb5b8;
+  color: #222;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: opacity 0.3s ease;
+  margin-top: 10px;
+}
+.prod-buy-now-btn:hover {
+  opacity: 0.9;
+}
+.prod-buy-now-btn.disabled, .prod-buy-now-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

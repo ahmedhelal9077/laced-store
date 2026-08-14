@@ -355,6 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
 
         <button class="prod-add-to-cart ${allSoldOut ? 'disabled' : ''}" id="add-to-cart-btn" ${allSoldOut ? 'disabled' : ''}>${allSoldOut ? 'Sold Out' : 'Add to cart'}</button>
+        <button class="prod-buy-now-btn ${allSoldOut ? 'disabled' : ''}" id="buy-now-btn" ${allSoldOut ? 'disabled' : ''}>Buy it now</button>
       `;
 
       
@@ -382,6 +383,12 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('add-to-cart-btn').addEventListener('click', () => {
         if (!selectedSize) { alert('Please select a size first.'); return; }
         cart.addItem(product, selectedSize, quantity);
+      });
+
+      document.getElementById('buy-now-btn').addEventListener('click', () => {
+        if (!selectedSize) { alert('Please select a size first.'); return; }
+        cart.addItem(product, selectedSize, quantity);
+        window.location.href = 'checkout.html';
       });
     } else {
       productGallery.style.display = 'none';
