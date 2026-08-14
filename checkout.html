@@ -358,7 +358,12 @@
               <span>InstaPay (إنستاباي)</span>
             </label>
             <div id="details-instapay" class="payment-details">
-              Send payment to IPA: <strong id="dynamic-instapay">laced@instapay</strong>. Order will be confirmed upon receipt.
+              <div style="background:#f4f9f4; padding:15px; border-radius:8px; border:1px solid #c2e0c6; color:#1f3b35; margin-top:10px; font-family: 'Inter', Tahoma, Arial, sans-serif;" dir="rtl">
+                <strong style="font-size:1.1rem; display:block; margin-bottom:8px;">خطوات الدفع عبر إنستاباي:</strong>
+                ١. قم بتحويل الإجمالي إلى عنوان إنستاباي: <strong id="dynamic-instapay" style="font-size:1.1rem; color:#000;">laced@instapay</strong><br>
+                ٢. التقط سكرين شوت لإيصال التحويل.<br>
+                ٣. أرسل السكرين شوت مع اسمك ورقم الطلب على واتساب لتأكيد طلبك: <a id="dynamic-wa-instapay" href="https://wa.me/201061922430" target="_blank" style="font-weight:bold; color:#25D366; text-decoration:underline;">اضغط هنا لإرسال السكرين</a>.
+              </div>
             </div>
 
             <label class="payment-method">
@@ -366,7 +371,12 @@
               <span>E-Wallet (Vodafone Cash / الخ)</span>
             </label>
             <div id="details-ewallet" class="payment-details">
-              Transfer total to <strong id="dynamic-ewallet">010xxxxxxxx</strong>. Order will be confirmed upon receipt.
+              <div style="background:#f4f9f4; padding:15px; border-radius:8px; border:1px solid #c2e0c6; color:#1f3b35; margin-top:10px; font-family: 'Inter', Tahoma, Arial, sans-serif;" dir="rtl">
+                <strong style="font-size:1.1rem; display:block; margin-bottom:8px;">خطوات الدفع عبر المحفظة (فودافون كاش / الخ):</strong>
+                ١. قم بتحويل الإجمالي إلى الرقم: <strong id="dynamic-ewallet" style="font-size:1.1rem; color:#000;">010xxxxxxxx</strong><br>
+                ٢. التقط سكرين شوت لإيصال التحويل.<br>
+                ٣. أرسل السكرين شوت مع اسمك ورقم الطلب على واتساب لتأكيد طلبك: <a id="dynamic-wa-ewallet" href="https://wa.me/201061922430" target="_blank" style="font-weight:bold; color:#25D366; text-decoration:underline;">اضغط هنا لإرسال السكرين</a>.
+              </div>
             </div>
             
             <label class="payment-method">
@@ -513,8 +523,14 @@
       // 2. Fetch settings asynchronously without blocking
       fetch('/api/settings').then(res => res.json()).then(data => {
         storeSettings = data;
-        if (storeSettings.payment && storeSettings.payment.instapay) document.getElementById('dynamic-instapay').innerText = storeSettings.payment.instapay;
-        if (storeSettings.payment && storeSettings.payment.ewallet) document.getElementById('dynamic-ewallet').innerText = storeSettings.payment.ewallet;
+        if (storeSettings.payment && storeSettings.payment.instapay) 
+          document.getElementById('dynamic-instapay').innerText = storeSettings.payment.instapay;
+        if (storeSettings.payment && storeSettings.payment.ewallet) 
+          document.getElementById('dynamic-ewallet').innerText = storeSettings.payment.ewallet;
+        
+        const waLink = (storeSettings.store && storeSettings.store.whatsapp) ? storeSettings.store.whatsapp : 'https://wa.me/201061922430';
+        document.getElementById('dynamic-wa-instapay').href = waLink;
+        document.getElementById('dynamic-wa-ewallet').href = waLink;
       }).catch(e => console.error('Settings fetch error:', e));
     });
 
