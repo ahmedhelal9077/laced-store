@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="qa-size-name">${size}</div>
             <div class="qa-qty-control">
               <div class="qa-qty-inner">
-                <button class="qa-qty-btn" onclick="updateQuickAddQty(${product.id}, '${size}', -1)">âˆ’</button>
+                <button class="qa-qty-btn" onclick="updateQuickAddQty(${product.id}, '${size}', -1)">-</button>
                 <span class="qa-qty-val">${qty}</span>
                 <button class="qa-qty-btn" onclick="updateQuickAddQty(${product.id}, '${size}', 1)">+</button>
               </div>
@@ -667,5 +667,6 @@ window.addEventListener('settingsLoaded', () => {
         }
     }
 });
+
 
 
