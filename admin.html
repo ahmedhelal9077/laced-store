@@ -208,7 +208,7 @@
           
           <!-- Store Info -->
           <div style="background:#fff; padding:25px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
-            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">ðŸ“± Store Info</h3>
+            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">📱 Store Info</h3>
             <label style="display:block; font-weight:600; margin-bottom:5px;">WhatsApp Number</label>
             <input type="text" id="setting-whatsapp" placeholder="e.g. 201000000000" style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px;" />
             <label style="display:block; font-weight:600; margin-bottom:5px;">Instagram</label>
@@ -221,7 +221,7 @@
 
           <!-- Payment Details -->
           <div style="background:#fff; padding:25px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
-            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">ðŸ’³ Payment Details</h3>
+            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">💳 Payment Details</h3>
             <label style="display:block; font-weight:600; margin-bottom:5px;">InstaPay Handle</label>
             <input type="text" id="setting-instapay" placeholder="e.g. laced@instapay" style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px;" />
             <label style="display:block; font-weight:600; margin-bottom:5px;">E-Wallet Number (Vodafone Cash)</label>
@@ -230,14 +230,14 @@
 
           <!-- Promo Codes -->
           <div style="background:#fff; padding:25px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
-            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">ðŸ·ï¸ Promo Codes</h3>
+            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">🏷️ Promo Codes</h3>
             <div id="promo-codes-list" style="display:flex; flex-direction:column; gap:10px;"></div>
             <button onclick="addPromoCode()" class="btn" style="margin-top:15px; width:100%;">+ Add Promo Code</button>
           </div>
 
           <!-- Free Shipping -->
           <div style="background:#fff; padding:25px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
-            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">ðŸšš Free Shipping</h3>
+            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">🚚 Free Shipping</h3>
             <label style="display:block; font-weight:600; margin-bottom:5px;">Free Shipping if order above (EGP)</label>
             <input type="number" id="setting-free-shipping" placeholder="e.g. 2000 (0 = disabled)" style="width:100%; padding:10px; margin-bottom:10px; border:1px solid #ddd; border-radius:6px;" />
             <p style="font-size:0.85rem; color:#888;">Set to 0 to disable free shipping.</p>
@@ -245,7 +245,7 @@
 
           <!-- Hero Banner -->
           <div style="background:#fff; padding:25px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
-            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">ðŸŽ¯ Hero Banner</h3>
+            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">🎯 Hero Banner</h3>
             <label style="display:block; font-weight:600; margin-bottom:5px;">Title</label>
             <input type="text" id="setting-hero-title" placeholder="e.g. Step Into Style" style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px;" />
             <label style="display:block; font-weight:600; margin-bottom:5px;">Subtitle</label>
@@ -256,26 +256,26 @@
 
           <!-- Order Notes -->
           <div style="background:#fff; padding:25px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
-            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">ðŸ“‹ Order Confirmation Note</h3>
+            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">📋 Order Confirmation Note</h3>
             <label style="display:block; font-weight:600; margin-bottom:5px;">Message shown after order is placed</label>
             <textarea id="setting-order-notes" rows="4" placeholder="e.g. Your order will be delivered within 3-5 business days." style="width:100%; padding:10px; border:1px solid #ddd; border-radius:6px; resize:vertical; font-family:Inter,sans-serif;"></textarea>
           </div>
 
           <!-- Maintenance Mode -->
           <div style="background:#fff; padding:25px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
-            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">â¸ï¸ Maintenance Mode</h3>
+            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">⚙️ Maintenance Mode</h3>
             <label style="display:flex; align-items:center; gap:10px; font-weight:600; margin-bottom:12px; cursor:pointer;">
               <input type="checkbox" id="setting-maintenance-on" style="width:20px; height:20px; cursor:pointer;" />
               Enable Maintenance Mode
             </label>
             <label style="display:block; font-weight:600; margin-bottom:5px;">Maintenance Message</label>
             <input type="text" id="setting-maintenance-msg" placeholder="e.g. We're updating our store. Back soon!" style="width:100%; padding:10px; border:1px solid #ddd; border-radius:6px;" />
-            <p style="font-size:0.85rem; color:#ff4444; margin-top:8px;">âš ï¸ When enabled, customers will see only the maintenance message.</p>
+            <p style="font-size:0.85rem; color:#ff4444; margin-top:8px;">⚠️ When enabled, customers will see only the maintenance message.</p>
           </div>
 
           <!-- Change Password -->
           <div style="background:#fff; padding:25px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
-            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">ðŸ”’ Admin Password</h3>
+            <h3 style="margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px;">🔒 Admin Password</h3>
             <label style="display:block; font-weight:600; margin-bottom:5px;">New Password</label>
             <input type="password" id="setting-new-password" placeholder="Enter new password" style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px;" />
             <label style="display:block; font-weight:600; margin-bottom:5px;">Confirm Password</label>
@@ -284,7 +284,7 @@
 
         </div>
         
-        <button onclick="saveSettings()" style="margin-top:25px; padding:15px 40px; background:#25D366; color:#fff; font-weight:700; border:none; cursor:pointer; font-size:1.1rem; border-radius:6px; width:100%; letter-spacing:0.5px;">âœ… Save All Settings</button>
+        <button onclick="saveSettings()" style="margin-top:25px; padding:15px 40px; background:#25D366; color:#fff; font-weight:700; border:none; cursor:pointer; font-size:1.1rem; border-radius:6px; width:100%; letter-spacing:0.5px;">✅ Save All Settings</button>
       </div>
 
       <!-- Products Tab -->
