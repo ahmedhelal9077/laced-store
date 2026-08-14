@@ -95,18 +95,20 @@ document.addEventListener('DOMContentLoaded', () => {
       let totalItems = 0;
       let totalPrice = 0;
       
-      const sizesHtml = product.sizes.map(size => {
+      const sizesHtml = product.sizes.map(sizeObj => {
+        const size = typeof sizeObj === 'object' ? sizeObj.name : sizeObj;
+        const available = typeof sizeObj === 'object' ? sizeObj.available : true;
         const qty = getVariantQty(size);
         totalItems += qty;
         totalPrice += (qty * product.price);
         return `
-          <div class="qa-size-row">
-            <div class="qa-size-name">${size}</div>
+          <div class="qa-size-row ${!available ? 'disabled' : ''}">
+            <div class="qa-size-name">${size}${!available ? ' (Sold Out)' : ''}</div>
             <div class="qa-qty-control">
               <div class="qa-qty-inner">
-                <button class="qa-qty-btn" onclick="updateQuickAddQty(${product.id}, '${size}', -1)">-</button>
+                <button class="qa-qty-btn" onclick="updateQuickAddQty(${product.id}, '${size}', -1)" ${!available ? 'disabled' : ''}>-</button>
                 <span class="qa-qty-val">${qty}</span>
-                <button class="qa-qty-btn" onclick="updateQuickAddQty(${product.id}, '${size}', 1)">+</button>
+                <button class="qa-qty-btn" onclick="updateQuickAddQty(${product.id}, '${size}', 1)" ${!available ? 'disabled' : ''}>+</button>
               </div>
             </div>
             <div class="qa-price-col">
@@ -199,10 +201,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const shopTitle = document.querySelector('.shop-section .section-title');
     
     if (category === 'ladies') {
-      filteredProducts = products.filter(p => p.sizes && p.sizes.some(s => parseInt(s) <= 40));
+      filteredProducts = products.filter(p => p.sizes && p.sizes.some(s => {
+        const val = typeof s === 'object' ? s.name : s;
+        return parseInt(val) <= 40;
+      }));
       if (shopTitle) shopTitle.textContent = "Ladies Collection";
     } else if (category === 'mens') {
-      filteredProducts = products.filter(p => p.sizes && p.sizes.some(s => parseInt(s) >= 41));
+      filteredProducts = products.filter(p => p.sizes && p.sizes.some(s => {
+        const val = typeof s === 'object' ? s.name : s;
+        return parseInt(val) >= 41;
+      }));
       if (shopTitle) shopTitle.textContent = "Men's Collection";
     } else {
       if (shopTitle) shopTitle.textContent = "All Footwear";
@@ -277,9 +285,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (product) {
       document.title = `${product.name} | LACED`;
 
-      const sizesHtml = product.sizes.map(size =>
-        `<button class="prod-size-btn" data-size="${size}">${size}</button>`
-      ).join('');
+      const allSoldOut = product.sizes.every(sObj => typeof sObj === 'object' ? !sObj.available : false);
+
+      const sizesHtml = product.sizes.map(sizeObj => {
+        const size = typeof sizeObj === 'object' ? sizeObj.name : sizeObj;
+        const available = typeof sizeObj === 'object' ? sizeObj.available : true;
+        return `<button class="prod-size-btn ${!available ? 'disabled' : ''}" data-size="${size}" ${!available ? 'disabled' : ''}>${size}</button>`;
+      }).join('');
 
       productGallery.innerHTML = `
         <div class="main-image">
@@ -289,8 +301,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Related products
       const relatedProducts = products.filter(p => p.id !== product.id).sort(() => 0.5 - Math.random()).slice(0, 3);
-            const relatedHtml = relatedProducts.map(p => {
-        const sizeOptions = p.sizes.map(s => `<option value="${s}">${s}</option>`).join('');
+      const relatedHtml = relatedProducts.map(p => {
+        const sizeOptions = p.sizes.map(sObj => {
+          const s = typeof sObj === 'object' ? sObj.name : sObj;
+          const available = typeof sObj === 'object' ? sObj.available : true;
+          return `<option value="${s}" ${!available ? 'disabled' : ''}>${s}${!available ? ' (Sold Out)' : ''}</option>`;
+        }).join('');
         return `
         <div class="goes-well-item">
           <input type="checkbox" class="goes-well-check">
@@ -338,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>
 
-        <button class="prod-add-to-cart" id="add-to-cart-btn">Add to cart</button>
+        <button class="prod-add-to-cart ${allSoldOut ? 'disabled' : ''}" id="add-to-cart-btn" ${allSoldOut ? 'disabled' : ''}>${allSoldOut ? 'Sold Out' : 'Add to cart'}</button>
       `;
 
       

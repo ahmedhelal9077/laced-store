@@ -1202,3 +1202,13 @@ html, body {
   object-fit: contain !important;
 }
 
+
+.prod-size-btn:disabled, .qa-size-row.disabled {
+  text-decoration: line-through;
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #eee;
+}
+.gw-size-select:disabled, .gw-size-select option:disabled {
+  color: #ccc;
+}

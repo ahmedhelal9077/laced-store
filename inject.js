@@ -16,7 +16,19 @@ const syncJS = `
         const mapped = data.products.map(p => {
            let sizes = [];
            if (p.variants && p.variants.length > 0) {
-             sizes = [...new Set(p.variants.map(v => v.title).filter(t => t !== 'Default Title'))];
+             sizes = p.variants.filter(t => t.title !== 'Default Title').map(v => ({
+               name: v.title,
+               available: v.available === undefined ? true : v.available
+             }));
+             sizes = sizes.reduce((acc, current) => {
+               const x = acc.find(item => item.name === current.name);
+               if (!x) {
+                 return acc.concat([current]);
+               } else {
+                 x.available = x.available || current.available;
+                 return acc;
+               }
+             }, []);
            }
            let body = p.body_html ? p.body_html.replace(/<[^>]*>?/gm, '').substring(0, 150) : 'Premium imported footwear.';
            return {
@@ -27,7 +39,7 @@ const syncJS = `
              image: p.images && p.images.length > 0 ? p.images[0].src : '',
              isNew: true,
              description: body,
-             sizes: sizes.length > 0 ? sizes : ['41', '42', '43', '44', '45']
+             sizes: sizes.length > 0 ? sizes : [{name:'41', available:true}, {name:'42', available:true}]
            };
         });
 
