@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="product-card">
         <div class="product-img-wrap">
           <a href="product?id=${product.id}">
-            <img src="${product.image}" alt="${product.name}" class="product-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x600?text=LACED';">
+            <img src="${product.image}" alt="${product.name}" class="product-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x600?text=LACED+EG';">
           </a>
           <span class="sale-badge">Sale</span>
         </div>
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="quick-add-left">
             <div>
               <div class="quick-add-img-wrap">
-                <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x600?text=LACED';">
+                <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x600?text=LACED+EG';">
               </div>
               <a href="product?id=${product.id}" class="quick-add-details-link">View full details <i class="fa-solid fa-arrow-right"></i></a>
             </div>
@@ -295,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       productGallery.innerHTML = `
         <div class="main-image">
-          <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x600?text=LACED';">
+          <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x600?text=LACED+EG';">
         </div>
       `;
 
@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return `
         <div class="goes-well-item">
           <input type="checkbox" class="goes-well-check">
-          <img src="${p.image}" class="goes-well-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/60x60?text=LACED';">
+          <img src="${p.image}" class="goes-well-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/60x60?text=LACED+EG';">
           <div class="goes-well-info">
             <div class="gw-title">${p.name}</div>
             <div class="gw-size">
@@ -614,7 +614,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
           return `
             <a href="product?id=${p.id}" class="search-product-item">
-              <img src="${p.image}" alt="${p.name}" onerror="this.onerror=null; this.src='https://via.placeholder.com/60x60?text=LACED';">
+              <img src="${p.image}" alt="${p.name}" onerror="this.onerror=null; this.src='https://via.placeholder.com/60x60?text=LACED+EG';">
               <div class="title">${titleHtml}</div>
             </a>
           `;
