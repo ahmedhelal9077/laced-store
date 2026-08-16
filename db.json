@@ -150,6 +150,30 @@
       "id": 1004,
       "date": "2026-08-15T07:40:46.243Z",
       "status": "Pending"
+    },
+    {
+      "customer": {
+        "name": "Ahmed Hlal",
+        "phone": "01275870139",
+        "city": "Gharbia",
+        "address": "Rya"
+      },
+      "paymentMethod": "Visa",
+      "items": [
+        {
+          "id": 8152902631487,
+          "name": "adidas Adistar\nCloud White Core Black",
+          "price": 1850,
+          "image": "https://cdn.shopify.com/s/files/1/0634/9894/4575/files/IMG-5710.webp?v=1778663820",
+          "size": "37",
+          "quantity": 1
+        }
+      ],
+      "total": 1950,
+      "id": 1005,
+      "date": "2026-08-16T13:20:19.051Z",
+      "status": "Pending Payment",
+      "paymobOrderId": 588675306
     }
   ],
   "products": [
